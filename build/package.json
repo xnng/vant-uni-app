@@ -1,0 +1,7 @@
+{
+  "name": "vant-uni-app",
+  "version": "0.0.4",
+  "description": "vant ui for uni-app",
+  "repository": "https://github.com/xnng/vant-uni-app.git",
+  "main": "lib/index.js"
+}
