@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'vant-uni-app',
+  title: 'Vant uni-app',
   themeConfig: {
     nav: [
       { text: 'NPM', link: 'https://www.npmjs.com/package/vant-uni-app', target: '_blank' },
