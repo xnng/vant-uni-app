@@ -1,6 +1,6 @@
 <template>
   <view>
-    <van-button>按钮</van-button>
+    <van-button type="default">按钮</van-button>
   </view>
 </template>
 
