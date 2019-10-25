@@ -1,0 +1,69 @@
+// Basic Colors
+$black: #000;
+$white: #fff;
+$green: #07c160;
+$blue: #1989fa;
+$red: #ee0a24;
+$orange: #ff976a;
+
+// Component Colors
+$text-color: #323233;
+
+// Border
+$border-color: #ebedf0;
+$border-radius-sm: 2px;
+$border-width-base: 1px;
+
+// Font
+$font-size-xs: 10px;
+$font-size-sm: 12px;
+$font-size-md: 14px;
+$font-size-lg: 16px;
+$font-weight-bold: 500;
+
+// Padding
+$padding-base: 4px;
+$padding-xs: $padding-base * 2;
+$padding-sm: $padding-base * 3;
+$padding-md: $padding-base * 4;
+$padding-lg: $padding-base * 6;
+$padding-xl: $padding-base * 8;
+
+// Animation
+$animation-duration-base: .3s;
+$animation-duration-fast: .2s;
+
+// Button
+$button-default-height: 44px;
+$button-default-line-height: 42px;
+$button-default-font-size: $font-size-lg;
+$button-border-radius: $border-radius-sm;
+$button-default-line-height: 42px;
+$button-border-width: $border-width-base;
+$button-normal-font-size: $font-size-md;
+$button-default-color: $text-color;
+$button-default-background-color: $white;
+$button-default-border-color: $border-color;
+$button-primary-color: $white;
+$button-primary-background-color: $green;
+$button-primary-border-color: $green;
+$button-small-min-width: 60px;
+$button-small-height: 30px;
+$button-small-font-size: $font-size-sm;
+$button-small-line-height: 28px;
+$button-large-height: 50px;
+$button-large-line-height: 48px;
+$button-mini-min-width: 50px;
+$button-mini-font-size: $font-size-xs;
+$button-mini-line-height: 20px;
+$button-mini-height: 22px;
+$button-info-color: $white;
+$button-info-background-color: $blue;
+$button-info-border-color: $blue;
+$button-danger-color: $white;
+$button-danger-background-color: $red;
+$button-danger-border-color: $red;
+$button-warning-color: $white;
+$button-warning-background-color: $orange;
+$button-warning-border-color: $orange;
+$button-plain-background-color: $white;
