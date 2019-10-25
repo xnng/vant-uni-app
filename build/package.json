@@ -1,8 +1,7 @@
 {
   "name": "vant-uni-app",
-  "version": "0.0.5",
+  "version": "0.0.8",
   "private": false,
   "description": "vant ui for uni-app",
-  "repository": "https://github.com/xnng/vant-uni-app.git",
-  "main": "lib/index.js"
+  "repository": "https://github.com/xnng/vant-uni-app.git"
 }

@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import { vanButton } from '@/components'
+import vanButton from 'vant-uni-app/lib/button'
 export default {
   components: { vanButton }
 }

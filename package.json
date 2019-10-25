@@ -1,10 +1,9 @@
 {
-  "name": "vant-uni-app",
+  "name": "vant-uni-app-s",
   "private": true,
   "version": "0.0.3",
   "description": "vant ui for uni-app",
   "repository": "https://github.com/xnng/vant-uni-app.git",
-  "main": "lib/index.js",
   "scripts": {
     "serve": "npm run dev:h5",
     "build": "npm run build:h5",
@@ -25,7 +24,7 @@
     "dev:mp-toutiao": "cross-env NODE_ENV=development UNI_PLATFORM=mp-toutiao vue-cli-service uni-build --watch",
     "dev:mp-weixin": "cross-env NODE_ENV=development UNI_PLATFORM=mp-weixin vue-cli-service uni-build --watch",
     "info": "node node_modules/@dcloudio/vue-cli-plugin-uni/commands/info.js",
-    "publish": "sh publish.sh"
+    "doc": "vuepress dev docs"
   },
   "dependencies": {
     "@dcloudio/uni-app-plus": "^2.0.0-23720191024001",
@@ -39,7 +38,7 @@
     "@dcloudio/uni-stat": "^2.0.0-23720191024001",
     "flyio": "^0.6.2",
     "regenerator-runtime": "^0.12.1",
-    "vant-uni-app": "0.0.4",
+    "vant-uni-app": "0.0.8",
     "vue": "^2.6.10",
     "vuex": "^3.0.1"
   },
@@ -61,7 +60,8 @@
     "postcss-comment": "^2.0.0",
     "sass": "^1.23.1",
     "sass-loader": "^8.0.0",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.10",
+    "vuepress": "^1.2.0"
   },
   "browserslist": [
     "Android >= 4",
