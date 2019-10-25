@@ -1,3 +1,4 @@
-import vanButton  from './button.vue'
+import vanButton from './button.vue'
+import vanHeader from './header.vue'
 
-export default vanButton
+export { vanButton, vanHeader }
