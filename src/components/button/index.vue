@@ -15,6 +15,7 @@
     <!-- #endif -->
   >
     <slot />
+    <image></image>
   </button>
 </template>
 

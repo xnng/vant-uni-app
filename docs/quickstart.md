@@ -2,7 +2,7 @@
 
 ## 脚手架
 
-推荐使用 Vue 官方提供的脚手架 Vue Cli 3 创建 uni-app 项目
+推荐使用 Vue 官方提供的脚手架 [Vue Cli 3](https://cli.vuejs.org/zh/) 创建 uni-app 项目
 
 ### 安装 Vue Cli
 
@@ -32,7 +32,7 @@ yarn add vant-uni-app
 
 ## 引入组件
 
-由于小程序的限制，目前还不支持全局注册组件，仅支持局部注册，例如使用 `button` 组件：
+uni-app 目前还不支持全局注册组件，仅支持局部注册，使用 `button` 组示例：
 
 - 引入
 
