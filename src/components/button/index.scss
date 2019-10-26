@@ -36,6 +36,10 @@
     opacity: 0.1;
   }
 
+  &--disabled {
+    opacity: 0.5
+  }
+
   &--default {
     color: $button-default-color;
     background-color: $button-default-background-color;
@@ -130,5 +134,13 @@
       transform-origin: 0 0;
       transform: scale(0.5, 0.5);
     }
+  }
+
+  &--square {
+    border-radius: 0;
+  }
+
+  &--round {
+    border-radius: $button-round-border-radius;
   }
 }

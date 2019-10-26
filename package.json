@@ -40,6 +40,7 @@
     "@dcloudio/uni-stat": "^2.0.0-23720191024001",
     "flyio": "^0.6.2",
     "regenerator-runtime": "^0.12.1",
+    "vant": "^2.2.9",
     "vant-uni-app": "0.0.8",
     "vue": "^2.6.10",
     "vuex": "^3.0.1"
@@ -55,9 +56,13 @@
     "@types/html5plus": "*",
     "@types/uni-app": "*",
     "@vue/cli-plugin-babel": "3.5.1",
+    "@vue/cli-plugin-eslint": "^4.0.5",
     "@vue/cli-service": "^4.0.0",
     "ali-oss": "^6.1.1",
+    "babel-eslint": "^10.0.3",
     "babel-plugin-import": "^1.11.0",
+    "eslint": "^6.6.0",
+    "eslint-plugin-vue": "^5.2.3",
     "mini-types": "*",
     "miniprogram-api-typings": "^2.8.0-2",
     "postcss-comment": "^2.0.0",
@@ -65,6 +70,22 @@
     "sass-loader": "^8.0.0",
     "vue-template-compiler": "^2.6.10",
     "vuepress": "^1.2.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {
+      "vue/no-parsing-error": "off"
+    },
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
   },
   "browserslist": [
     "Android >= 4",

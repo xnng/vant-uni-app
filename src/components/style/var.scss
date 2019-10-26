@@ -13,6 +13,7 @@ $text-color: #323233;
 $border-color: #ebedf0;
 $border-radius-sm: 2px;
 $border-width-base: 1px;
+$border-radius-max: 999px;
 
 // Font
 $font-size-xs: 10px;
@@ -67,3 +68,4 @@ $button-warning-color: $white;
 $button-warning-background-color: $orange;
 $button-warning-border-color: $orange;
 $button-plain-background-color: $white;
+$button-round-border-radius: $border-radius-max;
