@@ -10,7 +10,9 @@
       `${square ? 'van-button--square' : ''}`,
       `${round ? 'van-button--round' : ''}`
     ]"
-    :style="`color: ${customColor.borderColor}`"
+    <!-- #ifdef H5 -->
+    :style="customColor(color)"
+    <!-- #endif -->
   >
     <slot />
   </button>
@@ -52,25 +54,20 @@ export default {
       default: ''
     }
   },
-  data() {
-    return {
-      customColor: { background: 'red', color: 'red', borderColor: 'red' },
-    }
-  },
   methods: {
-    // customColor() {
-    //   const color = this.color
-    //   if (!color) return
-    //   const style = {
-    //     background: this.plain ? 'white' : color,
-    //     color: this.plain ? color : 'white',
-    //     borderColor: color
-    //   }
-    //   if (color.indexOf('gradient') !== -1) {
-    //     style.border = 0
-    //   }
-    //   return style
-    // }
+    customColor (color) {
+      if (!color) return
+      const style = {
+        background: this.plain ? 'white' : color,
+        color: this.plain ? color : 'white',
+        borderColor: color
+      }
+      if (color.indexOf('gradient') !== -1) {
+        style.border = 0
+      }
+
+      return style
+    }
   }
 }
 </script>

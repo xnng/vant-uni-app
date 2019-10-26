@@ -1,0 +1,18 @@
+{
+  "root": true,
+  "env": {
+    "node": true
+  },
+  "extends": ["plugin:vue/essential", "@vue/standard"],
+  "rules": {
+    "vue/no-parsing-error": [
+      "error",
+      {
+        "unexpected-character-in-attribute-name": false
+      }
+    ]
+  },
+  "parserOptions": {
+    "parser": "babel-eslint"
+  }
+}
