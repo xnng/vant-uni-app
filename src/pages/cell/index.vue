@@ -18,6 +18,10 @@
     <van-cell title="单元格" is-link />
     <van-cell title="单元格" is-link value="内容" />
     <van-cell title="单元格" is-link arrow-direction="down" value="内容" />
+
+    <view class="demo-title">页面导航</view>
+    <van-cell title="URL 跳转" is-link url="/vant/mobile.html" />
+    <van-cell title="路由跳转" is-link to="index" />
   </view>
 </template>
 

@@ -4,11 +4,11 @@
     :class="[
       `van-button--${type}`,
       `van-button--${size}`,
-      `${plain ? 'van-button--plain': ''}`,
-      `${hairline ? 'van-button--hairline' : ''}`,
-      `${disabled ? 'van-button--disabled' : ''}`,
-      `${square ? 'van-button--square' : ''}`,
-      `${round ? 'van-button--round' : ''}`
+      plain ? 'van-button--plain': '',
+      hairline ? 'van-button--hairline' : '',
+      disabled ? 'van-button--disabled' : '',
+      square ? 'van-button--square' : '',
+      round ? 'van-button--round' : ''
     ]"
     <!-- #ifdef H5 -->
     :style="customColor(color)"

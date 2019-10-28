@@ -1,12 +1,13 @@
 <template>
-  <view class="van-cell">
+  <view class="van-cell" :class="$attrs.hasOwnProperty('is-link') ? 'van-cell--clickable' : ''">
+    <!-- left-icon -->
     <van-icon class="van-cell__left-icon" v-if="icon" :name="icon" />
 
     <!-- title -->
     <view
       v-if="!isOnlyHasValue()"
       class="van-cell__title"
-      :class="`${size === 'large' ? 'van-cell--large': '' }`"
+      :class="size === 'large' ? 'van-cell--large': ''"
     >
       <view>
         <slot v-if="$slots.title" name="title" />
@@ -16,7 +17,7 @@
       <view
         v-if="label || $slots.label"
         class="van-cell__label"
-        :class="`${size === 'large' ? 'van-cell--large': '' }`"
+        :class="size === 'large' ? 'van-cell--large': ''"
       >
         <slot v-if="$slots.label" name="label" />
         <block v-else-if="label">{{label}}</block>
@@ -24,10 +25,11 @@
     </view>
 
     <!-- value -->
-    <view class="van-cell__value" :class="`${isOnlyHasValue() ? 'van-cell--alone': '' }`">
+    <view class="van-cell__value" :class="isOnlyHasValue() ? 'van-cell--alone': ''">
       <slot v-if="$slots.default" name="default" />
       <block v-else-if="value">{{value}}</block>
     </view>
+    <!-- right-icon -->
     <van-icon
       class="van-cell__right-icon"
       v-if="$attrs.hasOwnProperty('is-link')"
@@ -155,6 +157,12 @@ export default {
   &__right-icon {
     margin-left: 5px;
     color: $cell-right-icon-color;
+  }
+
+  &--clickable {
+    &:active {
+      background-color: $cell-active-color;
+    }
   }
 }
 </style>
