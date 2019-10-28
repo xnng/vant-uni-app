@@ -28,6 +28,11 @@
       <slot v-if="$slots.default" name="default" />
       <block v-else-if="value">{{value}}</block>
     </view>
+    <van-icon
+      class="van-cell__right-icon"
+      v-if="$attrs.hasOwnProperty('is-link')"
+      :name="arrowDirection === 'down' ? 'arrow-down': arrowDirection"
+    />
   </view>
 </template>
 
@@ -55,7 +60,14 @@ export default {
     icon: {
       type: String,
       default: ''
+    },
+    arrowDirection: {
+      type: String,
+      default: 'arrow'
     }
+  },
+  mounted () {
+    console.log(this.arrowDirection)
   },
   methods: {
     isOnlyHasValue () {
@@ -130,7 +142,7 @@ export default {
 
   &__left-icon,
   &__right-icon {
-    min-width: 20rpx;
+    min-width: 15rpx;
     height: $cell-line-height;
     font-size: $cell-icon-size;
     line-height: $cell-line-height;

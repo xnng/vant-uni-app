@@ -12,7 +12,12 @@
     <van-cell value="内容" />
 
     <view class="demo-title">展示图标</view>
-    <van-cell title="单元格" icon="location-o" />
+    <van-cell title="单元格" value="内容" icon="location-o" />
+
+    <view class="demo-title">展示箭头</view>
+    <van-cell title="单元格" is-link />
+    <van-cell title="单元格" is-link value="内容" />
+    <van-cell title="单元格" is-link arrow-direction="down" value="内容" />
   </view>
 </template>
 
