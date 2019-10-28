@@ -7,13 +7,19 @@
       }
     },
     {
-      "path": "pages/index/index",
+      "path": "pages/collapse/index",
+      "style": {
+        "navigationBarTitleText": "Collapse 折叠面板"
+      }
+    },
+    {
+      "path": "pages/icon/index",
       "style": {
         "navigationBarTitleText": "vant-uni-app"
       }
     },
     {
-      "path": "pages/icon/index",
+      "path": "pages/index/index",
       "style": {
         "navigationBarTitleText": "vant-uni-app"
       }

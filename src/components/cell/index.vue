@@ -1,9 +1,5 @@
 <template>
-  <view
-    class="van-cell"
-    :class="$attrs.hasOwnProperty('is-link') ? 'van-cell--clickable' : ''"
-    @click="handleClick"
-  >
+  <view class="van-cell" :class="hasLink ? 'van-cell--clickable' : ''" @click="handleClick">
     <!-- left-icon -->
     <van-icon class="van-cell__left-icon" v-if="icon" :name="icon" />
 
@@ -34,10 +30,12 @@
       <block v-else-if="value">{{value}}</block>
     </view>
     <!-- right-icon -->
-    <slot name="right-icon" />
+    <view class="van-cell__right-icon">
+      <slot name="right-icon" />
+    </view>
     <van-icon
       class="van-cell__right-icon"
-      v-if="$attrs.hasOwnProperty('is-link')"
+      v-if="hasLink"
       :name="arrowDirection === 'down' ? 'arrow-down': arrowDirection"
     />
   </view>
@@ -79,6 +77,27 @@ export default {
     to: {
       type: String,
       default: ''
+    },
+    isLink: {
+      type: String,
+      default: null
+    }
+  },
+  data () {
+    return {
+      hasLink: false
+    }
+  },
+  watch: {
+    isLink: {
+      handler (val) {
+        if (typeof val === 'string') {
+          this.hasLink = true
+        } else {
+          this.hasLink = false
+        }
+      },
+      immediate: true
     }
   },
   methods: {

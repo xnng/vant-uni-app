@@ -5,6 +5,7 @@ $green: #07c160;
 $blue: #1989fa;
 $red: #ee0a24;
 $orange: #ff976a;
+$gray: #c8c9cc;
 $gray-dark: #969799;
 
 // Component Colors
@@ -99,3 +100,12 @@ $cell-group-title-color: $gray-dark;
 $cell-group-title-padding: $padding-md $padding-md $padding-xs;
 $cell-group-title-font-size: $font-size-md;
 $cell-group-title-line-height: 16px;
+
+// Collapse
+$collapse-item-transition-duration: $animation-duration-base;
+$collapse-item-content-padding: $padding-md;
+$collapse-item-content-font-size: 13px;
+$collapse-item-content-line-height: 1.5;
+$collapse-item-content-text-color: $gray-dark;
+$collapse-item-content-background-color: $white;
+$collapse-item-title-disabled-color: $gray;
