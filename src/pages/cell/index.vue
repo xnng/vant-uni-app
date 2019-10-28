@@ -30,14 +30,27 @@
     <van-cell-group title="分组2">
       <van-cell title="单元格" value="内容" />
     </van-cell-group>
+
+    <view class="demo-title">使用插槽</view>
+    <van-cell value="内容" is-link>
+      <template slot="title">
+        <span class="custom-title">单元格</span>
+        <!-- <van-tag type="danger">标签</van-tag> -->
+      </template>
+    </van-cell>
+
+    <van-cell title="单元格" icon="shop-o">
+      <van-icon slot="right-icon" name="search" style="line-height: inherit;" />
+    </van-cell>
   </view>
 </template>
 
 <script>
 import vanCell from '@/components/cell'
 import vanCellGroup from '@/components/cellGroup'
+import vanIcon from '@/components/icon'
 export default {
-  components: { vanCell, vanCellGroup }
+  components: { vanCell, vanCellGroup, vanIcon }
 }
 </script>
 <style lang="scss" scoped>

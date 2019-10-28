@@ -34,6 +34,7 @@
       <block v-else-if="value">{{value}}</block>
     </view>
     <!-- right-icon -->
+    <slot name="right-icon" />
     <van-icon
       class="van-cell__right-icon"
       v-if="$attrs.hasOwnProperty('is-link')"
