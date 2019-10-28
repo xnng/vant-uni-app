@@ -5,9 +5,11 @@ $green: #07c160;
 $blue: #1989fa;
 $red: #ee0a24;
 $orange: #ff976a;
+$gray-dark: #969799;
 
 // Component Colors
 $text-color: #323233;
+$active-color: #f2f3f5;
 
 // Border
 $border-color: #ebedf0;
@@ -69,3 +71,24 @@ $button-warning-background-color: $orange;
 $button-warning-border-color: $orange;
 $button-plain-background-color: $white;
 $button-round-border-radius: $border-radius-max;
+
+// Cell
+$cell-font-size: $font-size-md;
+$cell-line-height: 24px;
+$cell-vertical-padding: 10px;
+$cell-horizontal-padding: $padding-md;
+$cell-text-color: $text-color;
+$cell-background-color: $white;
+$cell-border-color: $border-color;
+$cell-active-color: $active-color;
+$cell-required-color: $red;
+$cell-label-color: $gray-dark;
+$cell-label-font-size: $font-size-sm;
+$cell-label-line-height: 18px;
+$cell-label-margin-top: 3px;
+$cell-value-color: $gray-dark;
+$cell-icon-size: 16px;
+$cell-right-icon-color: $gray-dark;
+$cell-large-vertical-padding: $padding-sm;
+$cell-large-title-font-size: $font-size-lg;
+$cell-large-label-font-size: $font-size-md;

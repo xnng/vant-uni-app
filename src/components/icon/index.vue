@@ -40,14 +40,15 @@ export default {
 @import '../../components/icon/index.scss';
 
 .iComponent {
-text-align: center;
-margin: auto;
-  position: relative;
+  /* text-align: center; */
+  /* margin: auto; */
+  display: inline-block;
+  /* position: relative; */
+  vertical-align: middle;
   i {
-
-    padding-top: 14px;
+    /* padding-top: 14px;
     width: 100%;
-    height: 100%;
+    height: 100%; */
   }
   .dot {
     position: absolute;
