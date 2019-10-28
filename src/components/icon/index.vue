@@ -1,14 +1,12 @@
 <template>
-  <view class="iComponent">
-    <i class="van-icon" :class="[imageIcon?'':`van-icon-${name}`]">
-      <view v-if="this.dot" class="dot">
-        <view style="position:relative">
-          <text class="text">{{info}}</text>
-        </view>
+  <i class="van-icon" :class="[imageIcon?'':`van-icon-${name}`]">
+    <view v-if="this.dot" class="dot">
+      <view style="position:relative">
+        <text class="text">{{info}}</text>
       </view>
-    </i>
-    <Image v-if="imageIcon" fit="contain" :src="name" />
-  </view>
+    </view>
+    <image v-if="imageIcon" fit="contain" :src="name" />
+  </i>
 </template>
 <script>
 export default {
@@ -37,18 +35,18 @@ export default {
 }
 </script>
 <style lang="scss">
-@import '../../components/icon/index.scss';
+@import './index.scss';
 
-.iComponent {
-  /* text-align: center; */
-  /* margin: auto; */
+/* .iComponent {
+  text-align: center;
+  margin: auto;
   display: inline-block;
-  /* position: relative; */
+  position: relative;
   vertical-align: middle;
   i {
-    /* padding-top: 14px;
+    padding-top: 14px;
     width: 100%;
-    height: 100%; */
+    height: 100%;
   }
   .dot {
     position: absolute;
@@ -68,5 +66,5 @@ export default {
       text-align: center;
     }
   }
-}
+} */
 </style>

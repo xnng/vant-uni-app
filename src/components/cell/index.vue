@@ -1,5 +1,7 @@
 <template>
   <view class="van-cell">
+    <van-icon class="van-cell__left-icon" v-if="icon" :name="icon" />
+
     <!-- title -->
     <view
       v-if="!isOnlyHasValue()"
@@ -7,7 +9,6 @@
       :class="`${size === 'large' ? 'van-cell--large': '' }`"
     >
       <view>
-        <van-icon class="van__left-icon" v-if="icon" :name="icon" />
         <slot v-if="$slots.title" name="title" />
         <block v-else-if="title">{{title}}</block>
       </view>
