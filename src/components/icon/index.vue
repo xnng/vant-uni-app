@@ -12,7 +12,6 @@
 export default {
   props: {
     name: String, // 图标名称或图片链接
-    // dot&info小程序挂了
     dot: Boolean, //  是否显示图标右上角小红点
     info: {
       type: [String, Number],
@@ -36,7 +35,25 @@ export default {
 </script>
 <style lang="scss">
 @import './index.scss';
-
+  .dot {
+    position: absolute;
+    top: -13px;
+    right: -5px;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background: red;
+    .text {
+      font-size: 13px;
+      font-weight: 700;
+      color: #fff;
+      height: 23px;
+      line-height: 21px;
+      margin: auto;
+      display: block;
+      text-align: center;
+    }
+  }
 /* .iComponent {
   text-align: center;
   margin: auto;
@@ -48,23 +65,7 @@ export default {
     width: 100%;
     height: 100%;
   }
-  .dot {
-    position: absolute;
-    top: 0;
-    right: -5px;
-    width: 23px;
-    height: 23px;
-    border-radius: 50%;
-    background: red;
-    .text {
-      font-size: 16px;
-      color: #fff;
-      height: 23px;
-      line-height: 23px;
-      margin: auto;
-      display: block;
-      text-align: center;
-    }
+
   }
 } */
 </style>

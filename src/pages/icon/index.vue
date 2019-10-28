@@ -3,7 +3,7 @@
     <view class="demo-title">标记样式</view>
     <view class="demo-row">
       <view class="box-view">
-        <vanIcon :name="baseIcon[0]" dot info="99"></vanIcon>
+        <vanIcon :name="baseIcon[0]" dot info="9"></vanIcon>
         {{baseIcon[0]}}
       </view>
     </view>
@@ -290,6 +290,8 @@ export default {
     text-align: center;
       margin: 10px;
       border-color: #fff;
+      display: flex;
+    flex-direction: column;
     }
   }
 }
