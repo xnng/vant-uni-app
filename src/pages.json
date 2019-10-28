@@ -7,6 +7,12 @@
       }
     },
     {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "vant-uni-app"
+      }
+    },
+    {
       "path": "pages/icon/index",
       "style": {
         "navigationBarTitleText": "vant-uni-app"

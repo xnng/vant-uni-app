@@ -3,6 +3,7 @@
   "env": {
     "node": true
   },
+  "globals": { "uni": "writable" },
   "extends": ["plugin:vue/essential", "@vue/standard"],
   "rules": {
     "vue/no-parsing-error": [

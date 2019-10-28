@@ -20,15 +20,24 @@
     <van-cell title="单元格" is-link arrow-direction="down" value="内容" />
 
     <view class="demo-title">页面导航</view>
-    <van-cell title="URL 跳转" is-link url="/vant/mobile.html" />
-    <van-cell title="路由跳转" is-link to="index" />
+    <van-cell title="URL 跳转" is-link url="/pages/button/index" />
+    <van-cell title="路由跳转" is-link to="/pages/icon/index" />
+
+    <view class="demo-title">分组标题</view>
+    <van-cell-group title="分组1">
+      <van-cell title="单元格" value="内容" />
+    </van-cell-group>
+    <van-cell-group title="分组2">
+      <van-cell title="单元格" value="内容" />
+    </van-cell-group>
   </view>
 </template>
 
 <script>
 import vanCell from '@/components/cell'
+import vanCellGroup from '@/components/cellGroup'
 export default {
-  components: { vanCell }
+  components: { vanCell, vanCellGroup }
 }
 </script>
 <style lang="scss" scoped>

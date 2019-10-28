@@ -1,5 +1,9 @@
 <template>
-  <view class="van-cell" :class="$attrs.hasOwnProperty('is-link') ? 'van-cell--clickable' : ''">
+  <view
+    class="van-cell"
+    :class="$attrs.hasOwnProperty('is-link') ? 'van-cell--clickable' : ''"
+    @click="handleClick"
+  >
     <!-- left-icon -->
     <van-icon class="van-cell__left-icon" v-if="icon" :name="icon" />
 
@@ -66,15 +70,32 @@ export default {
     arrowDirection: {
       type: String,
       default: 'arrow'
+    },
+    url: {
+      type: String,
+      default: ''
+    },
+    to: {
+      type: String,
+      default: ''
     }
-  },
-  mounted () {
-    console.log(this.arrowDirection)
   },
   methods: {
     isOnlyHasValue () {
       if (!this.title && !this.label && !this.$slots.title && !this.$slots.label) {
         return true
+      }
+    },
+    handleClick () {
+      if (this.url) {
+        uni.navigateTo({
+          url: this.url
+        })
+      }
+      if (this.to) {
+        uni.redirectTo({
+          url: this.to
+        })
       }
     }
   }
