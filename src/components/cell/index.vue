@@ -30,7 +30,7 @@
       <block v-else-if="value">{{value}}</block>
     </view>
     <!-- right-icon -->
-    <view class="van-cell__right-icon">
+    <view v-if="$slots['right-icon']" class="van-cell__right-icon">
       <slot name="right-icon" />
     </view>
     <van-icon
