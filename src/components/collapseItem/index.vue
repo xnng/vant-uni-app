@@ -1,11 +1,11 @@
 <template>
   <view class="van-hairline--top-bottom" @click="handleClick">
-    <van-cell
+    <view
       class="van-collapse-item__title"
-      :title="currentTitle"
-      is-link
-      arrow-direction="down"
-    />
+      :class="disabled ? 'van-collapse-item__title--disabled': ''"
+    >
+      <van-cell :title="title" is-link arrow-direction="down" />
+    </view>
     <view class="van-collapse-item__wrapper" :style="{height: contentHeight}">
       <view class="van-collapse-item__content">
         <slot />
@@ -18,16 +18,6 @@
 import vanCell from '../cell'
 export default {
   components: { vanCell },
-  mounted () {
-    let activeCollapse
-    // #ifndef H5
-    activeCollapse = this.$parent.$parent.activeNames
-    // #endif
-    // #ifdef H5
-    activeCollapse = this.$parent.$parent.value
-    // #endif
-    console.log(activeCollapse)
-  },
   props: {
     name: {
       type: String,
@@ -36,25 +26,33 @@ export default {
     title: {
       type: String,
       default: ''
-    }
-  },
-  computed: {
-    currentName () {
-      return this.name
     },
-    currentTitle () {
-      return this.title
+    disabled: {
+      type: Boolean,
+      default: false
     }
   },
   data () {
     return {
       isOpen: false,
-      contentHeight: 0
+      contentHeight: 51
     }
   },
+  mounted () {
+    let activeCollapse
+    // #ifndef H5
+    activeCollapse = this.$parent.$parent.activeNames
+    // #endif
+    // #ifdef H5
+    activeCollapse = this.$parent.$parent.value
+    // #endif
+    if (activeCollapse.find(item => item === this.name)) {
+      this.isOpen = true
+    }
+    this.changeContentHeight()
+  },
   methods: {
-    handleClick () {
-      this.isOpen = !this.isOpen
+    changeContentHeight () {
       if (this.isOpen) {
         const query = uni.createSelectorQuery().in(this)
         query
@@ -66,11 +64,16 @@ export default {
       } else {
         this.contentHeight = 0
       }
+    },
+    handleClick () {
+      if (this.disabled) return
+      this.isOpen = !this.isOpen
+      this.changeContentHeight()
     }
   }
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import './index.scss';
 </style>

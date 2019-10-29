@@ -20,17 +20,6 @@
         visibility: visible;
       }
     }
-
-    &--disabled {
-      &,
-      & .van-cell__right-icon {
-        color: $collapse-item-title-disabled-color;
-      }
-
-      &:active {
-        background-color: $white;
-      }
-    }
   }
 
   &__wrapper {
