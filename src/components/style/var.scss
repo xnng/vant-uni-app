@@ -8,6 +8,10 @@ $orange: #ff976a;
 $gray: #c8c9cc;
 $gray-dark: #969799;
 
+
+$gray: #c8c9cc;
+$gray-light: #e5e5e5;
+$gray-darker: #7d7e80;
 // Component Colors
 $text-color: #323233;
 $active-color: #f2f3f5;
@@ -109,3 +113,14 @@ $collapse-item-content-line-height: 1.5;
 $collapse-item-content-text-color: $gray-dark;
 $collapse-item-content-background-color: $white;
 $collapse-item-title-disabled-color: $gray;
+
+// Checkbox
+$checkbox-size: 20px;
+$checkbox-border-color: $gray-light;
+$checkbox-transition-duration: $animation-duration-fast;
+$checkbox-label-margin: $padding-xs;
+$checkbox-label-color: $text-color;
+$checkbox-checked-icon-color: $blue;
+$checkbox-disabled-icon-color: $gray;
+$checkbox-disabled-label-color: $gray;
+$checkbox-disabled-background-color: $border-color;
