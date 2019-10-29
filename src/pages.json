@@ -1,15 +1,15 @@
 {
   "pages": [
     {
-      "path": "pages/cell/index",
-      "style": {
-        "navigationBarTitleText": "vant-uni-app"
-      }
-    },
-    {
       "path": "pages/collapse/index",
       "style": {
         "navigationBarTitleText": "Collapse 折叠面板"
+      }
+    },
+    {
+      "path": "pages/cell/index",
+      "style": {
+        "navigationBarTitleText": "vant-uni-app"
       }
     },
     {

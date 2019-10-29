@@ -1,6 +1,11 @@
 <template>
   <view class="van-hairline--top-bottom" @click="handleClick">
-    <van-cell class="van-collapse-item__title" :title="currentTitle" is-link arrow-direction="down" />
+    <van-cell
+      class="van-collapse-item__title"
+      :title="currentTitle"
+      is-link
+      arrow-direction="down"
+    />
     <view class="van-collapse-item__wrapper" :style="{height: contentHeight}">
       <view class="van-collapse-item__content">
         <slot />
@@ -13,6 +18,16 @@
 import vanCell from '../cell'
 export default {
   components: { vanCell },
+  mounted () {
+    let activeCollapse
+    // #ifndef H5
+    activeCollapse = this.$parent.$parent.activeNames
+    // #endif
+    // #ifdef H5
+    activeCollapse = this.$parent.$parent.value
+    // #endif
+    console.log(activeCollapse)
+  },
   props: {
     name: {
       type: String,
