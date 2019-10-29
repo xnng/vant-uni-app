@@ -79,25 +79,13 @@ export default {
       default: ''
     },
     isLink: {
-      type: String,
-      default: null
+      type: Boolean,
+      default: false
     }
   },
-  data () {
-    return {
-      hasLink: false
-    }
-  },
-  watch: {
-    isLink: {
-      handler (val) {
-        if (typeof val === 'string') {
-          this.hasLink = true
-        } else {
-          this.hasLink = false
-        }
-      },
-      immediate: true
+  computed: {
+    hasLink () {
+      return this.isLink
     }
   },
   methods: {
