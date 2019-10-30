@@ -45,12 +45,10 @@ export default {
     }
   },
   watch: {
-    parentAccordion (val) {
-      if (val !== '') {
-        if (val !== this.name) {
-          this.isOpen = false
-          this.changeContentHeight()
-        }
+    parentAccordion (newVal) {
+      if (newVal !== '' && newVal !== this.name) {
+        this.isOpen = false
+        this.changeContentHeight()
       }
     }
   },
