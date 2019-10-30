@@ -1,6 +1,18 @@
 {
   "pages": [
     {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "Vant uni-app"
+      }
+    },
+    {
+      "path": "pages/button/index",
+      "style": {
+        "navigationBarTitleText": "button 按钮"
+      }
+    },
+    {
       "path": "pages/collapse/index",
       "style": {
         "navigationBarTitleText": "Collapse 折叠面板"
@@ -9,19 +21,19 @@
     {
       "path": "pages/cell/index",
       "style": {
-        "navigationBarTitleText": "vant-uni-app"
+        "navigationBarTitleText": "Cell 单元格"
       }
     },
     {
       "path": "pages/icon/index",
       "style": {
-        "navigationBarTitleText": "vant-uni-app"
+        "navigationBarTitleText": "Icon 图标"
       }
     },
     {
-      "path": "pages/index/index",
+      "path": "pages/checkBox/index",
       "style": {
-        "navigationBarTitleText": "vant-uni-app"
+        "navigationBarTitleText": "checkbox 复选框"
       }
     }
   ],

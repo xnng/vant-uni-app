@@ -1,0 +1,14 @@
+@import './var.scss';
+
+.van-collapse-item__title {
+  &--disabled {
+    &,
+    & .van-cell__right-icon,
+    .van-cell {
+      color: $collapse-item-title-disabled-color !important;
+    }
+    .van-cell--clickable:active {
+      background-color: $white !important;
+    }
+  }
+}

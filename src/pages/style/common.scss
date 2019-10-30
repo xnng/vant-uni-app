@@ -1,0 +1,18 @@
+page {
+  box-sizing: border-box;
+  background-color: #f8f8f8;
+}
+
+.van-collapse-rewrite {
+  .van-collapse-item__title {
+    .van-cell {
+      align-items: center;
+      font-size: 16px !important;
+      line-height: 40px !important;
+      font-weight: 500;
+    }
+  }
+  .van-collapse-item__content {
+    padding: 0 !important;
+  }
+}

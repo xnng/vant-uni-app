@@ -1,10 +1,10 @@
 <template>
-  <view class="van-hairline--top-bottom" @click="handleClick">
+  <view class="van-hairline--top-bottom">
     <view
       class="van-collapse-item__title"
-      :class="disabled ? 'van-collapse-item__title--disabled': ''"
+      :class="disabled && 'van-collapse-item__title--disabled'"
     >
-      <van-cell :title="title" is-link arrow-direction="down" />
+      <van-cell :title="title" is-link arrow-direction="down" @click="handleClick" />
     </view>
     <view class="van-collapse-item__wrapper" :style="{height: contentHeight}">
       <view class="van-collapse-item__content">

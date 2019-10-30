@@ -1,5 +1,5 @@
 <template>
-  <view class="van-cell" :class="hasLink ? 'van-cell--clickable' : ''" @click="handleClick">
+  <view class="van-cell" :class="hasLink &&  'van-cell--clickable'" @click="handleClick">
     <!-- left-icon -->
     <van-icon class="van-cell__left-icon" v-if="icon" :name="icon" />
 
@@ -95,6 +95,7 @@ export default {
       }
     },
     handleClick () {
+      this.$emit('click')
       if (this.url) {
         uni.navigateTo({
           url: this.url

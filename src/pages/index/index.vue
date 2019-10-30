@@ -1,71 +1,102 @@
 <template>
   <view>
-    <view class="demo-title">按钮类型</view>
-    <view class="demo-row">
-      <van-button class="demo-margin-right" type="default">默认按钮</van-button>
-      <van-button class="demo-margin-right" type="primary">主要按钮</van-button>
-      <van-button class="demo-margin-right" type="info">信息按钮</van-button>
+    <view class="van-demo-header">
+      <img class="img" src="https://img.yzcdn.cn/vant/logo.png" />
+      <text class="title">Vant uni-app</text>
     </view>
-    <van-button class="demo-margin-right" type="danger">危险按钮</van-button>
-    <van-button class="demo-margin-right" type="warning">警告按钮</van-button>
+    <view class="van-demo-desc">轻量、可靠、适配小程序的 uni-app 组件库</view>
 
-    <view class="demo-title">朴素按钮</view>
-    <van-button class="demo-margin-right" plain type="primary">朴素按钮</van-button>
-    <van-button class="demo-margin-right" plain type="info">朴素按钮</van-button>
+    <van-collapse-item title="基础组件" class="van-collapse-rewrite">
+      <van-cell title="Button 按钮" is-link url="/pages/button/index"></van-cell>
+      <van-cell title="Cell 单元格" is-link url="/pages/cell/index"></van-cell>
+      <van-cell title="Icon 图标" is-link url="/pages/icon/index"></van-cell>
+      <van-cell title="Popup 弹出层" is-link></van-cell>
+    </van-collapse-item>
 
-    <view class="demo-title">细边框</view>
-    <van-button class="demo-margin-right" plain hairline type="primary">细边框按钮</van-button>
-    <van-button class="demo-margin-right" plain hairline type="info">细边框按钮</van-button>
+    <van-collapse-item title="表单组件" class="van-collapse-rewrite">
+      <van-cell title="Checkbox 复选框" is-link url="/pages/checkBox/index"></van-cell>
+      <van-cell title="DatetimePicker 时间选择" is-link></van-cell>
+      <van-cell title="Field 输入框" is-link></van-cell>
+      <van-cell title="Picker 选择器" is-link></van-cell>
+      <van-cell title="Radio 单选框" is-link></van-cell>
+      <van-cell title="Search 搜素" is-link></van-cell>
+      <van-cell title="Stepper 步进器" is-link></van-cell>
+      <van-cell title="Switch 开关" is-link></van-cell>
+      <van-cell title="SwitchCell 开关单元格" is-link></van-cell>
+      <van-cell title="Uploader 文件上传" is-link></van-cell>
+    </van-collapse-item>
 
-    <view class="demo-title">禁用状态</view>
-    <van-button class="demo-margin-right" disabled type="primary">禁用状态</van-button>
-    <van-button class="demo-margin-right" disabled type="info">禁用状态</van-button>
+    <van-collapse-item title="反馈组件" class="van-collapse-rewrite">
+      <van-cell title="ActionSheet 上拉菜单" is-link></van-cell>
+      <van-cell title="Dialog 弹出框" is-link></van-cell>
+      <van-cell title="DropdownMenu 下拉菜单" is-link></van-cell>
+      <van-cell title="Loading 加载" is-link></van-cell>
+      <van-cell title="Toast 轻提示" is-link></van-cell>
+    </van-collapse-item>
 
-    <view class="demo-title">按钮形状</view>
-    <van-button class="demo-margin-right" square type="primary">方形按钮</van-button>
-    <van-button class="demo-margin-right" round type="info">圆形按钮</van-button>
+    <van-collapse-item title="展示组件" class="van-collapse-rewrite">
+      <van-cell title="Collapse 折叠面板" is-link url="/pages/collapse/index"></van-cell>
+      <van-cell title="CountDown 倒计时" is-link></van-cell>
+      <van-cell title="Pannel 面板" is-link></van-cell>
+      <van-cell title="Swipe 轮播" is-link></van-cell>
+      <van-cell title="Tag 标记" is-link></van-cell>
+    </van-collapse-item>
 
-    <!-- #ifdef H5 -->
-    <view class="demo-title">自定义颜色</view>
-    <van-button class="demo-margin-right" color="#7232dd">单色按钮</van-button>
-    <van-button class="demo-margin-right" color="#7232dd" plain>单色按钮</van-button>
-    <van-button class="demo-margin-right" color="linear-gradient(to right, #4bb0ff, #6149f6)">渐变色按钮</van-button>
-    <!-- #endif -->
+    <van-collapse-item title="导航组件" class="van-collapse-rewrite">
+      <van-cell title="NavBar 导航栏" is-link></van-cell>
+      <van-cell title="Pagination 分页" is-link></van-cell>
+      <van-cell title="Sidebar 侧边导航" is-link></van-cell>
+      <van-cell title="Tab 标签页" is-link></van-cell>
+      <van-cell title="TreeSelect 分类选择" is-link></van-cell>
+    </van-collapse-item>
 
-    <view class="demo-title">按钮尺寸</view>
-    <view class="demo-row">
-      <van-button class="demo-margin-right" type="primary" size="large">大号按钮</van-button>
-    </view>
-    <van-button class="demo-margin-right" type="primary" size="normal">普通按钮</van-button>
-    <van-button class="demo-margin-right" type="primary" size="small">小型按钮</van-button>
-    <van-button class="demo-margin-right" type="primary" size="mini">迷你按钮</van-button>
+    <van-collapse-item title="业务组件" class="van-collapse-rewrite">
+      <van-cell title="AddressEdit 地址编辑" is-link></van-cell>
+      <van-cell title="AddressList 地址列表" is-link></van-cell>
+    </van-collapse-item>
   </view>
 </template>
 
 <script>
-import vanButton from '@/components/button'
+import vanCollapseItem from '@/components/collapseItem'
+import vanCell from '@/components/cell'
 export default {
-  components: { vanButton }
+  components: { vanCollapseItem, vanCell },
+  methods: {
+    testClick () {
+      console.log('test')
+    }
+  }
 }
 </script>
-<style lang="scss" scoped>
-.demo-title {
-  font-size: 14px;
-  padding-top: 15px;
-  margin-bottom: 10px;
-  color: rgba(69, 90, 100, 0.6);
-}
-.demo-row {
-  margin-bottom: 10px;
-}
-.demo-margin-right {
-  margin-right: 15px;
-}
-</style>
-
 <style lang="scss">
 page {
+  padding: 0 30rpx;
+  background-color: #f3f3f8;
+}
+.van-demo-header {
+  display: flex;
   box-sizing: border-box;
-  padding: 0 15px;
+  padding: 32px 0 16px 16px;
+  align-items: center;
+  .img {
+    width: 36px;
+    height: 36px;
+  }
+  .title {
+    font-size: 50rpx;
+    font-weight: bold;
+    margin-left: 16px;
+  }
+}
+.van-demo-desc {
+  padding-left: 16px;
+  margin-bottom: 30px;
+  color: #7d7e80;
+  font-size: 14px;
+}
+.van-collapse-rewrite {
+  display: block;
+  margin-bottom: 20rpx;
 }
 </style>

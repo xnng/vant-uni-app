@@ -73,6 +73,8 @@
 
   &__right-icon {
     margin-left: 5px;
+    display: flex;
+    align-items: center;
     color: $cell-right-icon-color;
   }
 
