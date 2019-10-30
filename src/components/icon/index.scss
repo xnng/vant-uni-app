@@ -1,9 +1,15 @@
 // @import "../common/index.wxss";
 
 .van-icon {
+  /* #ifdef MP-WEIXIN */
+  padding-top: 6px;
+    /* #endif */
+  
   &__image {
     width: 1em;
     height: 1em;
+   
+
   }
 }
 @font-face {

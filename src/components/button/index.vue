@@ -9,6 +9,7 @@
       disabled ? 'van-button--disabled' : '',
       square ? 'van-button--square' : '',
       round ? 'van-button--round' : ''
+
     ]"
     <!-- #ifdef H5 -->
     :style="customColor(color)"

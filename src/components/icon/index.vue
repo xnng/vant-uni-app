@@ -1,5 +1,5 @@
 <template>
-  <i class="van-icon" :class="[imageIcon?'':`van-icon-${name}`]">
+  <i class="van-icon" :class="[imageIcon?'':`van-icon-${name}`]" @click="closeTag">
     <view v-if="this.dot" class="dot">
       <view style="position:relative">
         <text class="text">{{info}}</text>
@@ -29,7 +29,11 @@ export default {
   methods: {
     isImage (name) {
       return name ? name.indexOf('/') !== -1 : false
+    },
+    closeTag () {
+      this.$emit('closeTag', this.name)
     }
+
   }
 }
 </script>

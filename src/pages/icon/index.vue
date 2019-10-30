@@ -3,28 +3,28 @@
     <view class="demo-title">标记样式</view>
     <view class="demo-row">
       <view class="box-view">
-        <vanIcon :name="baseIcon[0]" dot info="9"></vanIcon>
+        <van-icon :name="baseIcon[0]" dot info="9"></van-icon>
         {{baseIcon[0]}}
       </view>
     </view>
     <view class="demo-title">基础样式</view>
     <view class="demo-row">
       <view class="box-view" v-for="(item,index) in baseIcon" v-bind:key="index">
-        <vanIcon :name="baseIcon[index]"></vanIcon>
+        <van-icon :name="baseIcon[index]"></van-icon>
         <text>{{item}}</text>
       </view>
     </view>
        <view class="demo-title">线框风格</view>
     <view class="demo-row">
       <view class="box-view" v-for="(item,index) in outline" v-bind:key="index">
-        <vanIcon :name="outline[index]"></vanIcon>
+        <van-icon :name="outline[index]"></van-icon>
         <text>{{item}}</text>
       </view>
     </view>
        <view class="demo-title">填充样式</view>
     <view class="demo-row">
       <view class="box-view" v-for="(item,index) in filled" v-bind:key="index">
-        <vanIcon :name="filled[index]"></vanIcon>
+        <van-icon :name="filled[index]"></van-icon>
         <text>{{item}}</text>
       </view>
     </view>

@@ -124,3 +124,32 @@ $checkbox-checked-icon-color: $blue;
 $checkbox-disabled-icon-color: $gray;
 $checkbox-disabled-label-color: $gray;
 $checkbox-disabled-background-color: $border-color;
+
+
+// Card
+$card-padding: $padding-xs $padding-md;
+$card-font-size: $font-size-sm;
+$card-text-color: $text-color;
+// $card-background-color: $background-color-light;
+$card-thumb-size: 90px;
+$card-title-line-height: 16px;
+$card-desc-color: $gray-darker;
+$card-desc-line-height: 20px;
+$card-price-color: $red;
+$card-origin-price-color: $gray-darker;
+$card-origin-price-font-size: $font-size-xs;
+
+// Tag
+$tag-padding: .2em .5em;
+$tag-font-size: $font-size-xs;
+$tag-medium-font-size: $font-size-sm;
+$tag-large-font-size: $font-size-md;
+$tag-text-color: $white;
+$tag-border-radius: .2em;
+$tag-round-border-radius: $border-radius-max;
+$tag-dander-color: $red;
+$tag-primary-color: $blue;
+$tag-success-color: $green;
+$tag-warning-color: $orange;
+$tag-default-color: $gray-dark;
+$tag-plain-background-color: $white;
