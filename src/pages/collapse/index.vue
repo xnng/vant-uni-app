@@ -8,10 +8,10 @@
     </van-collapse>
 
     <view class="demo-title">手风琴</view>
-    <van-collapse v-model="activeNames">
-      <van-collapse-item title="标题1" name="1">代码是写出来给人看的，附带能在机器上运行</van-collapse-item>
-      <van-collapse-item title="标题2" name="2">代码是写出来给人看的，附带能在机器上运行</van-collapse-item>
-      <van-collapse-item title="标题3" name="3" disabled>代码是写出来给人看的，附带能在机器上运行</van-collapse-item>
+    <van-collapse v-model="activeName" accordion>
+      <van-collapse-item title="标题1" name="1">内容</van-collapse-item>
+      <van-collapse-item title="标题2" name="2">内容</van-collapse-item>
+      <van-collapse-item title="标题3" name="3">内容</van-collapse-item>
     </van-collapse>
   </view>
 </template>
@@ -23,7 +23,8 @@ export default {
   components: { vanCollapseItem, vanCollapse },
   data () {
     return {
-      activeNames: ['1']
+      activeNames: ['1'],
+      activeName: '1'
     }
   }
 }

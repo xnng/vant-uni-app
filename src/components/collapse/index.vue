@@ -6,7 +6,26 @@
 
 <script>
 export default {
-  props: ['value']
+  props: {
+    value: {
+      type: [String, Array],
+      default: ''
+    },
+    accordion: {
+      type: Boolean,
+      default: false
+    }
+  },
+  data () {
+    return {
+      currentOpen: ''
+    }
+  },
+  methods: {
+    switch (name) {
+      this.currentOpen = name
+    }
+  }
 }
 </script>
 
