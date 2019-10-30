@@ -39,7 +39,7 @@
       <van-cell title="CountDown 倒计时" is-link></van-cell>
       <van-cell title="Pannel 面板" is-link></van-cell>
       <van-cell title="Swipe 轮播" is-link></van-cell>
-      <van-cell title="Tag 标记" is-link></van-cell>
+      <van-cell title="Tag 标记" is-link url="/pages/tag/index"></van-cell>
     </van-collapse-item>
 
     <van-collapse-item title="导航组件" class="van-collapse-rewrite">
@@ -53,6 +53,7 @@
     <van-collapse-item title="业务组件" class="van-collapse-rewrite">
       <van-cell title="AddressEdit 地址编辑" is-link></van-cell>
       <van-cell title="AddressList 地址列表" is-link></van-cell>
+      <van-cell title="Card 商品卡片" is-link url="/pages/card/index"></van-cell>
     </van-collapse-item>
   </view>
 </template>

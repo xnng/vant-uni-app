@@ -35,6 +35,18 @@
       "style": {
         "navigationBarTitleText": "checkbox 复选框"
       }
+    },
+    {
+      "path": "pages/tag/index",
+      "style": {
+        "navigationBarTitleText": "Tag 标记"
+      }
+    },
+    {
+      "path": "pages/card/index",
+      "style": {
+        "navigationBarTitleText": "Card 商品卡片"
+      }
     }
   ],
   "globalStyle": {
