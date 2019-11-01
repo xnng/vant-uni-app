@@ -72,4 +72,10 @@ export default {
 .van-field__control{
   margin-top: 33px;
 }
+van-search{
+  font-size: 14px;
+}
+.van-search{
+  font-size: 14px;
+}
 </style>

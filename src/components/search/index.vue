@@ -75,4 +75,5 @@ input{
 .van-field__control view{
   margin-top: 3px;
 }
+
 </style>

@@ -59,22 +59,37 @@ export default {
       status: false
     }
   },
+  watch: {
+    status: {
+      handler (value) {
+        this.status = value
+      },
+      immediate: true
+    }
+  },
   mounted () {
     this.status = this.value
   },
   methods: {
     onChange (e) {
       if (this.name) {
-        // this.$emit('result', this.name)
-        console.log()
+        // #ifdef   MP-WEIXIN
+        if (this.$parent.switch(this.name)) {
+          this.status = !this.status
+        }
+        // #endif
+        // #ifndef   MP-WEIXIN
         if (this.$parent.$parent.switch(this.name)) {
           this.status = !this.status
         }
+        // #endif
       }
 
       if (!this.disabled) {
         this.status = !this.status
-        this.$emit('change', this.status)
+        let i = false
+        if (this.useIconSlot)i = false
+        this.$emit('change', this.status, i)
       }
     }
   }
