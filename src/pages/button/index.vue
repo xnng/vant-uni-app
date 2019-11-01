@@ -66,6 +66,6 @@ export default {
 <style lang="scss">
 page {
   box-sizing: border-box;
-  padding: 0 15px;
+  padding: 0 30rpx 30rpx 30rpx;
 }
 </style>

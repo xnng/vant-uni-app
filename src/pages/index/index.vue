@@ -4,7 +4,7 @@
       <img class="img" src="https://img.yzcdn.cn/vant/logo.png" />
       <text class="title">Vant uni-app</text>
     </view>
-    <view class="van-demo-desc">轻量、可靠、适配小程序的 uni-app 组件库</view>
+    <view class="van-demo-desc">轻量、可靠的 uni-app 组件库</view>
 
     <van-collapse-item
       v-for="collapse of menuList"

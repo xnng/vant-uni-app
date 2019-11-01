@@ -11,9 +11,7 @@
       round ? 'van-button--round' : ''
 
     ]"
-    <!-- #ifdef H5 -->
-    :style="customColor(color)"
-    <!-- #endif -->
+    :style="{ background: customColor.background, color: customColor.color, borderColor: customColor.borderColor }"
   >
     <slot />
   </button>
@@ -55,19 +53,24 @@ export default {
       default: ''
     }
   },
-  methods: {
-    customColor (color) {
-      if (!color) return
-      const style = {
-        background: this.plain ? 'white' : color,
-        color: this.plain ? color : 'white',
-        borderColor: color
+  data () {
+    return {
+      customColor: {
+        background: '',
+        color: '',
+        borderColor: ''
       }
-      if (color.indexOf('gradient') !== -1) {
-        style.border = 0
-      }
-
-      return style
+    }
+  },
+  mounted () {
+    if (!this.color) return
+    this.borderColor = {
+      background: this.plain ? 'white' : this.color,
+      color: this.plain ? this.color : 'white',
+      borderColor: this.color
+    }
+    if (this.color.indexOf('gradient') !== -1) {
+      this.borderColor.border = 0
     }
   }
 }
