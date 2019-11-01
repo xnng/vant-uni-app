@@ -25,25 +25,34 @@
     <van-button class="demo-margin-right" square type="primary">方形按钮</van-button>
     <van-button class="demo-margin-right" round type="info">圆形按钮</van-button>
 
-    <view class="demo-title">自定义颜色</view>
-    <van-button class="demo-margin-right" color="#7232dd">单色按钮</van-button>
-    <van-button class="demo-margin-right" color="#7232dd" plain>单色按钮</van-button>
-    <van-button class="demo-margin-right" color="linear-gradient(to right, #4bb0ff, #6149f6)">渐变色按钮</van-button>
-
     <view class="demo-title">按钮尺寸</view>
     <view class="demo-row">
-      <van-button class="demo-margin-right" type="primary" size="large">大号按钮</van-button>
+      <van-button class="demo-margin-right" type="primary" size="large" @click="handleClick">大号按钮</van-button>
     </view>
     <van-button class="demo-margin-right" type="primary" size="normal">普通按钮</van-button>
     <van-button class="demo-margin-right" type="primary" size="small">小型按钮</van-button>
     <van-button class="demo-margin-right" type="primary" size="mini">迷你按钮</van-button>
+
+    <view class="demo-title">页面导航</view>
+    <van-button class="demo-margin-right" type="primary" url="/pages/index/index">URL 跳转</van-button>
+    <van-button class="demo-margin-right" type="primary" to="/pages/index/index">路由跳转</van-button>
+
+    <view class="demo-title">自定义颜色</view>
+    <van-button class="demo-margin-right" color="#7232dd">单色按钮</van-button>
+    <van-button class="demo-margin-right" color="#7232dd" plain>单色按钮</van-button>
+    <van-button class="demo-margin-right" color="linear-gradient(to right, #4bb0ff, #6149f6)">渐变色按钮</van-button>
   </view>
 </template>
 
 <script>
 import vanButton from '@/components/button'
 export default {
-  components: { vanButton }
+  components: { vanButton },
+  methods: {
+    handleClick () {
+      console.log('clicked')
+    }
+  }
 }
 </script>
 <style lang="scss" scoped>

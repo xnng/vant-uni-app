@@ -1,5 +1,6 @@
 <template>
   <button
+    @click="handleClick"
     class="van-button"
     :class="[
       `van-button--${type}`,
@@ -54,6 +55,14 @@ export default {
     color: {
       type: String,
       default: ''
+    },
+    url: {
+      type: String,
+      default: ''
+    },
+    to: {
+      type: String,
+      default: ''
     }
   },
   data () {
@@ -71,6 +80,17 @@ export default {
     this.currentBorderColor = this.color
     if (this.color.indexOf('gradient') !== -1) {
       this.border = 0
+    }
+  },
+  methods: {
+    handleClick () {
+      this.$emit('click')
+      if (this.url) {
+        uni.navigateTo({ url: this.url })
+      }
+      if (this.to) {
+        uni.redirectTo({ url: this.to })
+      }
     }
   }
 }
