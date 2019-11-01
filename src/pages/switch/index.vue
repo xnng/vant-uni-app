@@ -10,28 +10,28 @@
 
     <view class="cell">
       <van-cell-group>
-        <van-switch v-model="checked" @change="change" disabled title="标题" />
+        <van-switch v-model="checked1" @change="change" disabled title="标题" />
       </van-cell-group>
     </view>
         <view class="demo-title">自定义大小</view>
 
     <view class="cell">
       <van-cell-group>
-        <van-switch v-model="checked" @change="change" size="18px" title="标题" />
+        <van-switch v-model="checked2" @change="change" size="18px" title="标题" />
       </van-cell-group>
     </view>
         <view class="demo-title">自定义颜色</view>
     <view class="cell">
       <van-cell-group>
-        <van-switch v-model="checked" @change="change" active-color="#07c160" title="标题" />
+        <van-switch v-model="checked3" @change="change" active-color="#07c160" title="标题" />
       </van-cell-group>
     </view>
           <view class="demo-title">无标题单用</view>
     <view class="cell cell-only">
         <van-switch v-model="checked" @change="change" />
-        <van-switch v-model="checked" @change="change" disabled  />
-        <van-switch v-model="checked" @change="change"  size="18px"/>
-        <van-switch v-model="checked" @change="change"   active-color="#07c160"/>
+        <van-switch v-model="checked1" @change="change" disabled  />
+        <van-switch v-model="checked2" @change="change"  size="18px"/>
+        <van-switch v-model="checked3" @change="change"   active-color="#07c160"/>
     </view>
   </view>
 </template>
@@ -45,7 +45,10 @@ export default {
   },
   data () {
     return {
-      checked: true
+      checked: true,
+      checked1: true,
+      checked2: true,
+      checked3: true
     }
   },
   methods: {
@@ -58,6 +61,7 @@ export default {
 <style lang="scss">
   .cell{
     margin: 20px 0;
+    background: #fff;
   }
   .demo-title {
   font-size: 14px;
