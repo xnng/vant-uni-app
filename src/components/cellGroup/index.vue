@@ -20,8 +20,6 @@ export default {
 @import '../style/var';
 
 .van-cell-group {
-  background-color: $cell-group-background-color;
-
   &__title {
     padding: $cell-group-title-padding;
     color: $cell-group-title-color;

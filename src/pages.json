@@ -3,7 +3,8 @@
     {
       "path": "pages/index/index",
       "style": {
-        "navigationBarTitleText": "Vant uni-app"
+        "navigationBarTitleText": "Vant uni-app",
+        "navigationBarBackgroundColor": "#ffffff"
       }
     },
     {

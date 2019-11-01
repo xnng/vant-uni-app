@@ -113,4 +113,7 @@ export default {
 
 <style lang="scss">
 @import './index.scss';
+__van-cell {
+  background-color: red;
+}
 </style>

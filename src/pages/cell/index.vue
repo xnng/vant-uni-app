@@ -1,27 +1,39 @@
 <template>
   <view>
     <view class="demo-title">基础用法</view>
-    <van-cell title="单元格" value="内容" />
-    <van-cell title="单元格" value="内容" label="描述信息" />
+    <van-cell-group>
+      <van-cell title="单元格" value="内容" />
+      <van-cell title="单元格" value="内容" label="描述信息" />
+    </van-cell-group>
 
     <view class="demo-title">单元格大小</view>
-    <van-cell title="单元格" value="内容" size="large" />
-    <van-cell title="单元格" value="内容" size="large" label="描述信息" />
+    <view>
+      <van-cell title="单元格" value="内容" size="large" />
+      <van-cell title="单元格" value="内容" size="large" label="描述信息" />
+    </view>
 
     <view class="demo-title">只设置 value</view>
-    <van-cell value="内容" />
+    <view>
+      <van-cell value="内容" />
+    </view>
 
     <view class="demo-title">展示图标</view>
-    <van-cell title="单元格" value="内容" icon="location-o" />
+    <view>
+      <van-cell title="单元格" value="内容" icon="location-o" />
+    </view>
 
     <view class="demo-title">展示箭头</view>
-    <van-cell title="单元格" is-link />
-    <van-cell title="单元格" is-link value="内容" />
-    <van-cell title="单元格" is-link arrow-direction="down" value="内容" />
+    <view>
+      <van-cell title="单元格" is-link />
+      <van-cell title="单元格" is-link value="内容" />
+      <van-cell title="单元格" is-link arrow-direction="down" value="内容" />
+    </view>
 
     <view class="demo-title">页面导航</view>
-    <van-cell title="URL 跳转" is-link url="/pages/button/index" />
-    <van-cell title="路由跳转" is-link to="/pages/icon/index" />
+    <view>
+      <van-cell title="URL 跳转" is-link url="/pages/button/index" />
+      <van-cell title="路由跳转" is-link to="/pages/icon/index" />
+    </view>
 
     <view class="demo-title">分组标题</view>
     <van-cell-group title="分组1">
@@ -32,16 +44,18 @@
     </van-cell-group>
 
     <view class="demo-title">使用插槽</view>
-    <van-cell value="内容" is-link>
-      <template slot="title">
-        <span class="custom-title">单元格</span>
-        <!-- <van-tag type="danger">标签</van-tag> -->
-      </template>
-    </van-cell>
+    <view>
+      <van-cell value="内容" is-link>
+        <template slot="title">
+          <span class="custom-title">单元格</span>
+          <!-- <van-tag type="danger">标签</van-tag> -->
+        </template>
+      </van-cell>
 
-    <van-cell title="单元格" icon="shop-o">
-      <van-icon slot="right-icon" name="search" style="line-height: inherit;" />
-    </van-cell>
+      <van-cell title="单元格" icon="shop-o">
+        <van-icon slot="right-icon" name="search" style="line-height: inherit;" />
+      </van-cell>
+    </view>
   </view>
 </template>
 

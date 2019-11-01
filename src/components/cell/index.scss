@@ -1,4 +1,3 @@
-
 @import '../style/var.scss';
 .van-cell {
   position: relative;
@@ -12,6 +11,7 @@
   line-height: $cell-line-height;
   background-color: $cell-background-color;
 
+  // #ifdef H5
   &:not(:last-child)::after {
     position: absolute;
     box-sizing: border-box;
@@ -23,6 +23,22 @@
     border-bottom: 1px solid $cell-border-color;
     transform: scaleY(0.5);
   }
+  // #endif
+
+  // #ifndef H5
+  &::after {
+    position: absolute;
+    box-sizing: border-box;
+    content: ' ';
+    pointer-events: none;
+    right: 0;
+    bottom: 0;
+    left: $padding-md;
+    border-bottom: 1px solid $cell-border-color;
+    transform: scaleY(0.5);
+  }
+  // #endif
+
 
   &--alone {
     color: $text-color !important;

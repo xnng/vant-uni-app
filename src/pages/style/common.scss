@@ -4,12 +4,12 @@ page {
 }
 
 .van-collapse-rewrite {
+  box-shadow: 0 2rpx 10rpx #ebedf0;
   .van-collapse-item__title {
     .van-cell {
       align-items: center;
-      font-size: 16px !important;
-      line-height: 40px !important;
-      font-weight: 500;
+      font-size: 32rpx !important;
+      line-height: 80rpx !important;
     }
   }
   .van-collapse-item__content {
