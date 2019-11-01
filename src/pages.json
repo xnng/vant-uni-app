@@ -48,6 +48,18 @@
       "style": {
         "navigationBarTitleText": "Card 商品卡片"
       }
+    },
+    {
+      "path": "pages/search/index",
+      "style": {
+        "navigationBarTitleText": "Search 搜索"
+      }
+    },
+    {
+      "path": "pages/switch/index",
+      "style": {
+        "navigationBarTitleText": "Switch 开关"
+      }
     }
   ],
   "globalStyle": {

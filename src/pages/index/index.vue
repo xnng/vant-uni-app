@@ -41,7 +41,11 @@ export default {
         },
         {
           title: '表单组件',
-          children: [{ title: 'Checkbox 复选框', url: '/pages/checkBox/index' }]
+          children: [
+            { title: 'Checkbox 复选框', url: '/pages/checkBox/index' },
+            { title: 'Search 搜索', url: '/pages/search/index' },
+            { title: 'Switch 开关', url: '/pages/switch/index' }
+          ]
         },
         {
           title: '展示组件',
