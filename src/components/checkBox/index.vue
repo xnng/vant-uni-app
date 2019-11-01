@@ -36,7 +36,7 @@ export default {
     vanIcon
   },
   props: {
-    value: Boolean,
+    value: [Boolean, Array],
     disabled: Boolean,
     useIconSlot: Boolean,
     checkedColor: String,
@@ -65,7 +65,11 @@ export default {
   methods: {
     onChange (e) {
       if (this.name) {
-        uni.$emit('result', this.name)
+        // this.$emit('result', this.name)
+        console.log()
+        if (this.$parent.$parent.switch(this.name)) {
+          this.status = !this.status
+        }
       }
 
       if (!this.disabled) {

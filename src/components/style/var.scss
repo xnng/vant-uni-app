@@ -153,3 +153,33 @@ $tag-success-color: $green;
 $tag-warning-color: $orange;
 $tag-default-color: $gray-dark;
 $tag-plain-background-color: $white;
+
+// Switch
+$switch-width: 2em;
+$switch-height: 1em;
+$switch-node-size: 1em;
+$switch-node-z-index: 1;
+$switch-node-background-color: $white;
+$switch-node-box-shadow: 0 3px 1px 0 rgba(0, 0, 0, .05), 0 2px 2px 0 rgba(0, 0, 0, .1), 0 3px 3px 0 rgba(0, 0, 0, .05);
+$switch-background-color: $white;
+$switch-on-background-color: $blue;
+$switch-transition-duration: $animation-duration-base;
+$switch-border: $border-width-base solid rgba(0, 0, 0, .1);
+
+// SwitchCell
+$switch-cell-padding-top: $cell-vertical-padding - 1px;
+$switch-cell-padding-bottom: $cell-vertical-padding - 1px;
+$switch-cell-large-padding-top: $cell-large-vertical-padding - 1px;
+$switch-cell-large-padding-bottom: $cell-large-vertical-padding - 1px;
+
+// Search
+$search-padding: 10px $padding-sm;
+$search-background-color: #f7f8fA;
+$search-input-height: 34px;
+$search-label-padding: 0 5px;
+$search-label-color: $text-color;
+$search-label-font-size: $font-size-md;
+$search-left-icon-color: $gray-dark;
+$search-action-padding: 0 $padding-xs;
+$search-action-text-color: $text-color;
+$search-action-font-size: $font-size-md;

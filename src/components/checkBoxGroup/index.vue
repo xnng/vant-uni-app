@@ -1,6 +1,6 @@
 <template>
   <view>
-    <slot ></slot>
+    <slot></slot>
   </view>
 </template>
 <script>
@@ -22,18 +22,24 @@ export default {
     }
   },
   mounted () {
-    uni.$on('result', (name) => {
+    this.$on('result', name => {})
+  },
+  methods: {
+    switch (name) {
       if (this.arr.includes(name)) {
-        this.arr.pop(name)
+        let index = this.arr.indexOf(name)
+        if (index > -1) {
+          this.arr.splice(index, 1)
+        }
       } else {
-        (
-          this.arr.push(name)
-        )
+        if (this.max > 0 && this.max === this.arr.length) {
+          this.$emit('change', this.arr)
+          return true
+        }
+        this.arr.push(name)
       }
-      console.log(this.arr)
-      uni.$emit('change', this.arr)
-    })
+      this.$emit('change', this.arr)
+    }
   }
-
 }
 </script>

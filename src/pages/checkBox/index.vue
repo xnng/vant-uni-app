@@ -16,16 +16,16 @@
     </van-checkbox>
 
     <view class="demo-title">复选框组</view>
-    <van-checkbox-group v-model="result">
+    <van-checkbox-group v-model="result" @change="change">
       <van-checkbox name="a">复选框 a</van-checkbox>
       <van-checkbox name="b">复选框 b</van-checkbox>
       <van-checkbox name="c">复选框 c</van-checkbox>
     </van-checkbox-group>
     <view class="demo-title">设置最大可选数</view>
-    <van-checkbox-group v-model="result1">
-      <van-checkbox name="aa">复选框 a</van-checkbox>
-      <van-checkbox name="bb">复选框 b</van-checkbox>
-      <van-checkbox name="cc">复选框 c</van-checkbox>
+    <van-checkbox-group v-model="result" :max='2' @change="change">
+      <van-checkbox name="aa">复选框 aa</van-checkbox>
+      <van-checkbox name="bb">复选框 bb</van-checkbox>
+      <van-checkbox name="cc">复选框 cc</van-checkbox>
     </van-checkbox-group>
   </view>
 </template>
@@ -58,6 +58,9 @@ export default {
 }
 </script>
 <style lang="scss">
+view{
+  padding-left: 15px
+}
 .demo-title {
   font-size: 14px;
   padding-top: 15px;
