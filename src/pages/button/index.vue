@@ -25,12 +25,10 @@
     <van-button class="demo-margin-right" square type="primary">方形按钮</van-button>
     <van-button class="demo-margin-right" round type="info">圆形按钮</van-button>
 
-    <!-- #ifdef H5 -->
     <view class="demo-title">自定义颜色</view>
     <van-button class="demo-margin-right" color="#7232dd">单色按钮</van-button>
     <van-button class="demo-margin-right" color="#7232dd" plain>单色按钮</van-button>
     <van-button class="demo-margin-right" color="linear-gradient(to right, #4bb0ff, #6149f6)">渐变色按钮</van-button>
-    <!-- #endif -->
 
     <view class="demo-title">按钮尺寸</view>
     <view class="demo-row">

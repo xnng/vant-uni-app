@@ -4,14 +4,17 @@
     :class="[
       `van-button--${type}`,
       `van-button--${size}`,
-      plain ? 'van-button--plain': '',
-      hairline ? 'van-button--hairline' : '',
-      disabled ? 'van-button--disabled' : '',
-      square ? 'van-button--square' : '',
-      round ? 'van-button--round' : ''
-
+      plain && 'van-button--plain',
+      hairline && 'van-button--hairline',
+      disabled && 'van-button--disabled',
+      square && 'van-button--square',
+      round &&'van-button--round'
     ]"
-    :style="{ background: customColor.background, color: customColor.color, borderColor: customColor.borderColor }"
+    :style="{
+      background: currentBackground,
+      color: currentColor,
+      borderColor: currentBorderColor
+    }"
   >
     <slot />
   </button>
@@ -55,22 +58,19 @@ export default {
   },
   data () {
     return {
-      customColor: {
-        background: '',
-        color: '',
-        borderColor: ''
-      }
+      currentBackground: '',
+      currentColor: '',
+      currentBorderColor: ''
     }
   },
   mounted () {
     if (!this.color) return
-    this.borderColor = {
-      background: this.plain ? 'white' : this.color,
-      color: this.plain ? this.color : 'white',
-      borderColor: this.color
-    }
+
+    this.currentBackground = this.plain ? 'white' : this.color
+    this.currentColor = this.plain ? this.color : 'white'
+    this.currentBorderColor = this.color
     if (this.color.indexOf('gradient') !== -1) {
-      this.borderColor.border = 0
+      this.border = 0
     }
   }
 }
