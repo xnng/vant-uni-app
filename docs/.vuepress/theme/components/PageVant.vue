@@ -1,5 +1,7 @@
 <template>
-  <div class="container">hello</div>
+  <div class="van-container">
+    <div class="van-block"></div>
+  </div>
 </template>
 
 <script>
@@ -7,15 +9,22 @@ export default {}
 </script>
 
 <style lang="stylus" scoped>
-.container {
-  color: red;
-  font-size: 40px;
-  z-index 20;
+.van-container {
+  z-index: 20;
+  box-sizing: border-box;
+  padding-top: 5rem;
+  margin: 0 auto;
+
+  .van-block {
+    min-width: 360px;
+    height: 640px;
+    background-color: #f0f3f6;
+  }
 }
 
 @media (max-width: $MQMobile) {
-  .container {
-    display none;
+  .van-container {
+    display: none;
   }
 }
 </style>
