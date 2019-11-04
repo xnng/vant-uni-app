@@ -26,7 +26,8 @@
     "info": "node node_modules/@dcloudio/vue-cli-plugin-uni/commands/info.js",
     "doc:dev": "vuepress dev docs",
     "doc:build": "vuepress build docs",
-    "doc:prod": "yarn doc:build && node deploy-doc.js"
+    "doc:prod": "yarn doc:build && node deploy-doc.js",
+    "h5:prod": "yarn build:h5 && node deploy-h5.js"
   },
   "dependencies": {
     "@dcloudio/uni-app-plus": "^2.0.0-23720191024001",
@@ -40,9 +41,9 @@
     "@dcloudio/uni-stat": "^2.0.0-23720191024001",
     "flyio": "^0.6.2",
     "regenerator-runtime": "^0.12.1",
-    "vant": "^2.2.9",
     "vant-uni-app": "0.0.8",
     "vue": "^2.6.10",
+    "vuepress": "^1.2.0",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
@@ -68,10 +69,9 @@
     "mini-types": "*",
     "miniprogram-api-typings": "^2.8.0-2",
     "postcss-comment": "^2.0.0",
-    "sass": "^1.23.1",
+    "sass": "^1.23.3",
     "sass-loader": "^8.0.0",
-    "vue-template-compiler": "^2.6.10",
-    "vuepress": "^1.2.0"
+    "vue-template-compiler": "^2.6.10"
   },
   "browserslist": [
     "Android >= 4",

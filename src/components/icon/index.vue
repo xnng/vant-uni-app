@@ -39,37 +39,23 @@ export default {
 </script>
 <style lang="scss">
 @import './index.scss';
-  .dot {
-    position: absolute;
-    top: -13px;
-    right: -5px;
-    width: 23px;
+.dot {
+  position: absolute;
+  top: -13px;
+  right: -5px;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background: red;
+  .text {
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
     height: 23px;
-    border-radius: 50%;
-    background: red;
-    .text {
-      font-size: 13px;
-      font-weight: 700;
-      color: #fff;
-      height: 23px;
-      line-height: 21px;
-      margin: auto;
-      display: block;
-      text-align: center;
-    }
+    line-height: 21px;
+    margin: auto;
+    display: block;
+    text-align: center;
   }
-/* .iComponent {
-  text-align: center;
-  margin: auto;
-  display: inline-block;
-  position: relative;
-  vertical-align: middle;
-  i {
-    padding-top: 14px;
-    width: 100%;
-    height: 100%;
-  }
-
-  }
-} */
+}
 </style>

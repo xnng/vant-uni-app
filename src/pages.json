@@ -60,6 +60,12 @@
       "style": {
         "navigationBarTitleText": "Switch 开关"
       }
+    },
+    {
+      "path": "pages/popup/index",
+      "style": {
+        "navigationBarTitleText": "Popup 弹出层"
+      }
     }
   ],
   "globalStyle": {

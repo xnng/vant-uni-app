@@ -11,8 +11,8 @@ const client = new OSS({
 })
 
 const config = {
-  localBasePath: 'docs/.vuepress/dist',
-  cloudBasePath: '/'
+  localBasePath: 'dist/build/h5',
+  cloudBasePath: '/h5'
 }
 
 const initLocalPath = path.resolve(__dirname, config.localBasePath)

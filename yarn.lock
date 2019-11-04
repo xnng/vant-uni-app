@@ -629,7 +629,7 @@
     core-js "^2.6.5"
     regenerator-runtime "^0.13.2"
 
-"@babel/runtime@7.x", "@babel/runtime@^7.0.0":
+"@babel/runtime@^7.0.0":
   version "7.6.3"
   resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.6.3.tgz#935122c74c73d2240cafd32ddb5fc2a6cd35cf1f"
   integrity sha512-kq6anf9JGjW8Nt5rYfEuGRaEAaH1mkv3Bbu6rYvLOpPh/RusSJXuKPEAoZ7L7gybZkchE8+NV5g9vKF4AGAtsA==
@@ -921,11 +921,6 @@
   integrity sha512-wO0HQ/qrLuSqIdWkqC8hdaZKsVF1NXEf/YmCGhFtXMtNj1fXkcK8kELiPYUlYW10PNl4CZ6qcPxoD3bURxBRdg==
   dependencies:
     vue "^2.6.8"
-
-"@vant/icons@1.1.14":
-  version "1.1.14"
-  resolved "https://registry.npm.taobao.org/@vant/icons/download/@vant/icons-1.1.14.tgz?cache=0&sync_timestamp=1571923117293&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40vant%2Ficons%2Fdownload%2F%40vant%2Ficons-1.1.14.tgz#76dfb7be055f98875d703af59a6216539c32a8cd"
-  integrity sha1-dt+3vgVfmIddcDr1mmIWU5wyqM0=
 
 "@vue/babel-helper-vue-jsx-merge-props@^1.0.0":
   version "1.0.0"
@@ -8711,10 +8706,10 @@ sass-loader@^8.0.0:
     schema-utils "^2.1.0"
     semver "^6.3.0"
 
-sass@^1.23.1:
-  version "1.23.1"
-  resolved "https://registry.npm.taobao.org/sass/download/sass-1.23.1.tgz#0e5b72ba2bd9f0229a637d33f8dd5bf2d810beb3"
-  integrity sha1-DltyuivZ8CKaY30z+N1b8tgQvrM=
+sass@^1.23.3:
+  version "1.23.3"
+  resolved "https://registry.npmjs.org/sass/-/sass-1.23.3.tgz#f07503b9e8d2bcf06ef69e8beea5d085589b1620"
+  integrity sha512-1DKRZxJMOh4Bme16AbWTyYeJAjTlrvw2+fWshHHaepeJfGq2soFZTnt0YhWit+bohtDu4LdyPoEj6VFD4APHog==
   dependencies:
     chokidar ">=2.0.0 <4.0.0"
 
@@ -10074,16 +10069,6 @@ vant-uni-app@0.0.8:
   resolved "https://registry.npmjs.org/vant-uni-app/-/vant-uni-app-0.0.8.tgz#a7c2966fcb0bab6b0fcdcd24218f2e4d54f4d490"
   integrity sha512-iERZr74v75mQNadsod2fqH4Ww+BibLYhyDKp/H38wp5s43f5P75YEyAh2JyRZ9RozU719K/2/oe8Tu3gplNXTQ==
 
-vant@^2.2.9:
-  version "2.2.9"
-  resolved "https://registry.npm.taobao.org/vant/download/vant-2.2.9.tgz#ac3b5829faec8173896af6fc15864ec33e34fea8"
-  integrity sha1-rDtYKfrsgXOJavb8FYZOwz40/qg=
-  dependencies:
-    "@babel/runtime" "7.x"
-    "@vant/icons" "1.1.14"
-    "@vue/babel-helper-vue-jsx-merge-props" "^1.0.0"
-    vue-lazyload "1.2.3"
-
 vary@~1.1.2:
   version "1.1.2"
   resolved "https://registry.npmjs.org/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
@@ -10125,15 +10110,21 @@ vue-hot-reload-api@^2.3.0:
   resolved "https://registry.npmjs.org/vue-hot-reload-api/-/vue-hot-reload-api-2.3.4.tgz#532955cc1eb208a3d990b3a9f9a70574657e08f2"
   integrity sha512-BXq3jwIagosjgNVae6tkHzzIk6a8MHFtzAdwhnV5VlvPTFxDCvIttgSiHWjdGoTJvXtmRu5HacExfdarRcFhog==
 
-vue-lazyload@1.2.3:
-  version "1.2.3"
-  resolved "https://registry.npm.taobao.org/vue-lazyload/download/vue-lazyload-1.2.3.tgz?cache=0&sync_timestamp=1568830051812&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvue-lazyload%2Fdownload%2Fvue-lazyload-1.2.3.tgz#901f9ec15c7e6ca78781a2bae4a343686bdedb2c"
-  integrity sha1-kB+ewVx+bKeHgaK65KNDaGve2yw=
-
-vue-loader@^15.7.0, vue-loader@^15.7.1:
+vue-loader@^15.7.0:
   version "15.7.1"
   resolved "https://registry.npmjs.org/vue-loader/-/vue-loader-15.7.1.tgz#6ccacd4122aa80f69baaac08ff295a62e3aefcfd"
   integrity sha512-fwIKtA23Pl/rqfYP5TSGK7gkEuLhoTvRYW+TU7ER3q9GpNLt/PjG5NLv3XHRDiTg7OPM1JcckBgds+VnAc+HbA==
+  dependencies:
+    "@vue/component-compiler-utils" "^3.0.0"
+    hash-sum "^1.0.2"
+    loader-utils "^1.1.0"
+    vue-hot-reload-api "^2.3.0"
+    vue-style-loader "^4.1.0"
+
+vue-loader@^15.7.1:
+  version "15.7.2"
+  resolved "https://registry.npmjs.org/vue-loader/-/vue-loader-15.7.2.tgz#cc89e2716df87f70fe656c9da9d7f8bec06c73d6"
+  integrity sha512-H/P9xt/nkocyu4hZKg5TzPqyCT1oKOaCSk9zs0JCbJuy0Q8KtR0bjJpnT/5R5x/Ckd1GFkkLQnQ1C4x6xXeLZg==
   dependencies:
     "@vue/component-compiler-utils" "^3.0.0"
     hash-sum "^1.0.2"
