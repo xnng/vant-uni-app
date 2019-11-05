@@ -1,7 +1,12 @@
 <template>
   <div class="van-container">
     <div class="van-block">
-      <iframe id="preview-iframe" :src="baseUrl" frameborder="0" style="height: 640px;width:360px;border-radius: 6px"></iframe>
+      <iframe
+        id="preview-iframe"
+        :src="baseUrl"
+        frameborder="0"
+        style="height: 640px;width:360px;border-radius: 6px"
+      ></iframe>
     </div>
   </div>
 </template>
@@ -74,7 +79,8 @@ export default {
   box-sizing: border-box;
   padding-top: 89px;
   margin: 0 auto;
-  width: 360px
+  min-width: 400px;
+  position: relative;
 
   .van-block {
     width: 360px;
@@ -84,6 +90,13 @@ export default {
     right: 30px;
     height: 640px;
     box-shadow: 0 0 9px 4px #eee;
+  }
+}
+
+@media (max-width: 1265px) {
+  .van-block {
+    right: auto;
+    left: 860px;
   }
 }
 

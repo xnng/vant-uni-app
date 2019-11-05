@@ -1,5 +1,6 @@
 <script>
 export default {
+  // #ifdef H5
   computed: {
     currentRouter () {
       return this.$route.path
@@ -16,9 +17,10 @@ export default {
           window.parent.postMessage(JSON.stringify(data), '*')
         })
       },
-      immediate: true
+      immediate: false
     }
   }
+  // #endif
 }
 </script>
 
