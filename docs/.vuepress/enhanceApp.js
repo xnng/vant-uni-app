@@ -1,13 +1,23 @@
-export default ({
-  Vue, // VuePress 正在使用的 Vue 构造函数
-  options, // 附加到根实例的一些选项
-  router, // 当前应用的路由实例
-  siteData // 站点元数据
-}) => {
-  router.afterEach((to, from) => {
-    // console.log(to.path)
-    // Vue.nextTick(()=>{  
-    //   console.log(document.getElementById('preview-iframe'))
-    // })
+import baseUrl from './theme/config/var'
+
+export default ({ Vue, options, router, siteData }) => {
+  router.beforeEach((to, from, next) => {
+    const isPC = () => {
+      var userAgentInfo = navigator.userAgent
+      var Agents = ['Android', 'iPhone', 'SymbianOS', 'Windows Phone', 'iPad', 'iPod']
+      var flag = true
+      for (var v = 0; v < Agents.length; v++) {
+        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+          flag = false
+          break
+        }
+      }
+      return flag
+    }
+    if (!isPC()) {
+      window.location.href = baseUrl
+    } else {
+      next()
+    }
   })
 }

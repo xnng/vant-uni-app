@@ -80,7 +80,8 @@ export default {
     width: 360px;
     border-radius: 6px;
     position: fixed;
-    top: 89px
+    top: 89px;
+    right: 30px;
     height: 640px;
     box-shadow: 0 0 9px 4px #eee;
   }
