@@ -33,10 +33,9 @@
 
     function togglePage(url) {
       let doman = window.location.href.match(/(\S*)#/)[1] + '#/'
-      if(url === '/quickstart.html') return
       if (url === '/' && window.location.href === doman) {
         return
-      } else if (url === '/') {
+      } else if (url === '/' || url === '/quickstart.html') {
         window.location.href = doman
       } else {
         window.location.href = doman + 'pages/' + url.match(/\/(\S*).html/)[1] + '/index'

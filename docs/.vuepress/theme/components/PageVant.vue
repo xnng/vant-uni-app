@@ -19,6 +19,30 @@ export default {
       return this.$route.path
     }
   },
+  mounted() {
+    window.addEventListener('message', e => {
+        if (typeof e.data === 'string' && JSON.parse(e.data).type === 'togglePage') {
+          this.togglePage(JSON.parse(e.data).url)
+        }
+      }, false)
+  },
+  methods: {
+    togglePage(url) {
+      let doman = window.location.href
+
+      if(this.$route.path === url) return
+
+      if(url === '/') {
+        this.$router.push({path: '/'})
+        return
+      }
+      const currentUrl = url.match(/pages(\S*)\/index/)[1]
+      const targetRoute = `${currentUrl}.html`
+      
+      if(this.$route.path === targetRoute) return 
+      this.$router.push({path: `${currentUrl}.html`})
+    }
+  },
   watch: {
     currentRouter: {
       handler(val) {
