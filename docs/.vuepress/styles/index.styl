@@ -1,16 +1,45 @@
 .theme-default-content:not(.custom) {
-  padding-left: 250px;
-  padding-right: 30px;
-  max-width: 922px;
-}
-
-.page {
-  padding-left: 0;
+  padding-left: 19rem;
+  padding-right: 15px;
+  min-width: 1100px;
 }
 
 .sidebar {
   background-color: #ffffff;
-  width: 220px;
+  width: 276px;
+}
+
+@media (max-width: 1800px) {
+  .theme-default-content:not(.custom) {
+    min-width: 900px;
+  }
+}
+
+@media (max-width: 1620px) {
+  .theme-default-content:not(.custom) {
+    min-width: 700px;
+  }
+}
+
+@media (max-width: 1450px) {
+  .theme-default-content:not(.custom) {
+    min-width: 600px;
+    padding-left: 15rem;
+  }
+
+  .sidebar {
+    width: 220px;
+  }
+}
+
+@media (max-width: 720px) {
+  .theme-default-content:not(.custom) {
+    padding-left: 15px;
+  }
+}
+
+.page {
+  padding-left: 0;
 }
 
 em {

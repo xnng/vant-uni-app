@@ -27,7 +27,7 @@
     "doc:dev": "vuepress dev docs",
     "doc:build": "vuepress build docs",
     "doc:prod": "yarn doc:build && node deploy-doc.js",
-    "h5:prod": "yarn build:h5 && node deploy-h5.js"
+    "h5:prod": "yarn build:h5 && node deploy-h5.js && yarn doc:prod"
   },
   "dependencies": {
     "@dcloudio/uni-app-plus": "^2.0.0-23720191024001",

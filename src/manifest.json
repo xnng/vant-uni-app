@@ -47,7 +47,10 @@
   },
   "quickapp": {},
   "h5": {
-    "publicPath": "."
+    "publicPath": ".",
+    "devServer": {
+      "port": 8090
+    }
   },
   "mp-weixin": {
     "appid": "wx56e0603fc7a464de",
