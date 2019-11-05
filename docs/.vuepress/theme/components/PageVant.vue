@@ -1,7 +1,7 @@
 <template>
   <div class="van-container">
     <div class="van-block">
-      <iframe id="preview-iframe" :src="baseUrl" frameborder="0" style="height: 640px;width:360px"></iframe>
+      <iframe id="preview-iframe" :src="baseUrl" frameborder="0" style="height: 640px;width:360px;border-radius: 6px"></iframe>
     </div>
   </div>
 </template>
@@ -20,27 +20,31 @@ export default {
     }
   },
   mounted() {
-    window.addEventListener('message', e => {
+    window.addEventListener(
+      'message',
+      e => {
         if (typeof e.data === 'string' && JSON.parse(e.data).type === 'togglePage') {
           this.togglePage(JSON.parse(e.data).url)
         }
-      }, false)
+      },
+      false
+    )
   },
   methods: {
     togglePage(url) {
       let doman = window.location.href
 
-      if(this.$route.path === url) return
+      if (this.$route.path === url) return
 
-      if(url === '/') {
-        this.$router.push({path: '/'})
+      if (url === '/') {
+        this.$router.push({ path: '/' })
         return
       }
       const currentUrl = url.match(/pages(\S*)\/index/)[1]
       const targetRoute = `${currentUrl}.html`
-      
-      if(this.$route.path === targetRoute) return 
-      this.$router.push({path: `${currentUrl}.html`})
+
+      if (this.$route.path === targetRoute) return
+      this.$router.push({ path: `${currentUrl}.html` })
     }
   },
   watch: {
@@ -70,11 +74,15 @@ export default {
   box-sizing: border-box;
   padding-top: 89px;
   margin: 0 auto;
+  width: 360px
 
   .van-block {
-    min-width: 360px;
+    width: 360px;
+    border-radius: 6px;
+    position: fixed;
+    top: 89px
     height: 640px;
-    box-shadow: 0 0 9px 5px #eee;
+    box-shadow: 0 0 9px 4px #eee;
   }
 }
 
