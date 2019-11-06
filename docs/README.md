@@ -18,6 +18,12 @@ title: 介绍
 
 ## 更新日志
 
+### v0.1.1 <Badge text="2019-11-06" type="tip"/>
+
+- Features
+
+  - 完成弹出层组件基本功能
+
 ### v0.1.0 <Badge text="2019-11-06" type="tip"/>
 
 - Features
