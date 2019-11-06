@@ -65,6 +65,12 @@
       "style": {
         "navigationBarTitleText": "Popup 弹出层"
       }
+    },
+    {
+      "path": "pages/field/index",
+      "style": {
+        "navigationBarTitleText": "Field 输入框"
+      }
     }
   ],
   "globalStyle": {

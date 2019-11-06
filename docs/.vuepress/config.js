@@ -24,7 +24,7 @@ module.exports = {
           title: '表单组件',
           collapsable: false,
           sidebarDepth: 2,
-          children: ['checkbox', 'search','switch']
+          children: ['checkbox', 'search','switch', 'field']
         },
         {
           title: '展示组件',

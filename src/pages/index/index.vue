@@ -45,7 +45,8 @@ export default {
           children: [
             { title: 'Checkbox 复选框', url: '/pages/checkBox/index' },
             { title: 'Search 搜索', url: '/pages/search/index' },
-            { title: 'Switch 开关', url: '/pages/switch/index' }
+            { title: 'Switch 开关', url: '/pages/switch/index' },
+            { title: 'Field 输入框', url: '/pages/field/index' }
           ]
         },
         {

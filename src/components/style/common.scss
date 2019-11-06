@@ -1,5 +1,9 @@
 @import './var.scss';
 
+.uni-input {
+  height: 100% !important;
+}
+
 .van-collapse-item__title {
   &--disabled {
     &,
