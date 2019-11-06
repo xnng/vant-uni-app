@@ -15,3 +15,13 @@ title: 介绍
 ## 扫码预览
 
 <img style="height: 200px; display: block; margin: 20px auto 0 auto" src="https://cdn.xnngs.cn/img/20191104142053.png" />
+
+## 更新日志
+
+### v0.1.0 <Badge text="2019-11-06" type="tip"/>
+
+- Features
+
+  - 完成 `Button`、`Cell`、`Icon`、`Checkbox`、`Search`、`Switch`、`Collapse`、`Tag`、`Card` 这 9 个组件的基础功能
+  - doc: 完成 9 个上面 9 个组件对应的文档，实现 h5 预览窗口和文档的路由同步
+

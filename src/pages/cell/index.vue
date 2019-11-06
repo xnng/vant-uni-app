@@ -1,5 +1,5 @@
 <template>
-  <view>
+  <view class="page-container">
     <view class="demo-title">基础用法</view>
     <van-cell-group>
       <van-cell title="单元格" value="内容" />
@@ -74,5 +74,12 @@ export default {
   padding-top: 15px;
   margin-bottom: 10px;
   color: rgba(69, 90, 100, 0.6);
+}
+.page-container {
+  width: 100vw;
+  min-height: 100vh;
+  overflow-y: scroll;
+  box-sizing: border-box;
+  padding-bottom: 30rpx;
 }
 </style>

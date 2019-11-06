@@ -3,10 +3,9 @@
   <view>
     <view class="demo-title">基础用法</view>
     <view>
-
       <van-card num="2" price="2.00" :desc="desc" :title="title" :thumb="imageURL" />
     </view>
-<view class="demo-title">营销信息</view>
+    <view class="demo-title">营销信息</view>
     <view>
       <van-card
         num="2"
@@ -18,7 +17,7 @@
         :thumb="imageURL"
       />
     </view>
-<view class="demo-title">自定义内容</view>
+    <view class="demo-title">自定义内容</view>
     <view>
       <van-card num="2" price="2.00" :desc="desc" :title="title" :thumb="imageURL">
         <template #tags>
@@ -28,10 +27,10 @@
           </div>
         </template>
 
-          <div class=" van-card__footer">
-            <van-button round size="mini">{{ button}}</van-button>
-            <van-button round size="mini">{{ button}}</van-button>
-          </div>
+        <div class="van-card__footer">
+          <van-button round size="mini">{{ button}}</van-button>
+          <van-button round size="mini">{{ button}}</van-button>
+        </div>
       </van-card>
     </view>
   </view>
@@ -64,7 +63,7 @@ export default {
 <style lang="scss">
 .demo-title {
   font-size: 14px;
-padding: 35px 15px 15px;
+  padding: 35px 15px 15px;
   margin-bottom: 10px;
   background-color: #fff;
   color: rgba(69, 90, 100, 0.6);

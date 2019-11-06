@@ -24,7 +24,19 @@ module.exports = {
           title: '表单组件',
           collapsable: false,
           sidebarDepth: 2,
-          children: ['checkbox', 'datetimePicker']
+          children: ['checkbox', 'search','switch']
+        },
+        {
+          title: '展示组件',
+          collapsable: false,
+          sidebarDepth: 2,
+          children: ['collapse', 'tag']
+        },
+        {
+          title: '业务组件',
+          collapsable: false,
+          sidebarDepth: 2,
+          children: ['card']
         }
       ]
     }
