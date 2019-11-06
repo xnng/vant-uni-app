@@ -36,7 +36,8 @@ export default {
           children: [
             { title: 'Button 按钮', url: '/pages/button/index' },
             { title: 'Cell 单元格', url: '/pages/cell/index' },
-            { title: 'Icon 图标', url: '/pages/icon/index' }
+            { title: 'Icon 图标', url: '/pages/icon/index' },
+            { title: 'Popup 弹出层', url: '/pages/popup/index' }
           ]
         },
         {

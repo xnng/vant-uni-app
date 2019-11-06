@@ -18,7 +18,7 @@ module.exports = {
           title: '基础组件',
           collapsable: false,
           sidebarDepth: 2,
-          children: ['button', 'cell', 'icon']
+          children: ['button', 'cell', 'icon', 'popup']
         },
         {
           title: '表单组件',

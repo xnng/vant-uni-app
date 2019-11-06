@@ -1,33 +1,28 @@
 // Basic Colors
 $black: #000;
 $white: #fff;
-$green: #07c160;
-$blue: #1989fa;
 $red: #ee0a24;
+$blue: #1989fa;
 $orange: #ff976a;
-$gray: #c8c9cc;
-$gray-dark: #969799;
-
-
+$orange-dark: #ed6a0c;
+$orange-light: #fffbe8;
+$green: #07c160;
 $gray: #c8c9cc;
 $gray-light: #e5e5e5;
 $gray-darker: #7d7e80;
+$gray-dark: #969799;
+
+// Gradient Colors
+$gradient-red: linear-gradient(to right, #ff6034, #ee0a24);
+$gradient-orange: linear-gradient(to right, #ffd01e, #ff8917);
+
 // Component Colors
 $text-color: #323233;
 $active-color: #f2f3f5;
-
-// Border
-$border-color: #ebedf0;
-$border-radius-sm: 2px;
-$border-width-base: 1px;
-$border-radius-max: 999px;
-
-// Font
-$font-size-xs: 10px;
-$font-size-sm: 12px;
-$font-size-md: 14px;
-$font-size-lg: 16px;
-$font-weight-bold: 500;
+$active-opacity: .7;
+$disabled-opacity: .5;
+$background-color: #f8f8f8;
+$background-color-light: #fafafa;
 
 // Padding
 $padding-base: 4px;
@@ -37,9 +32,23 @@ $padding-md: $padding-base * 4;
 $padding-lg: $padding-base * 6;
 $padding-xl: $padding-base * 8;
 
+// Font
+$font-size-xs: 10px;
+$font-size-sm: 12px;
+$font-size-md: 14px;
+$font-size-lg: 16px;
+$font-weight-bold: 500;
+
 // Animation
 $animation-duration-base: .3s;
 $animation-duration-fast: .2s;
+
+// Border
+$border-color: #ebedf0;
+$border-width-base: 1px;
+$border-radius-sm: 2px;
+$border-radius-md: 4px;
+$border-radius-max: 999px;
 
 // Button
 $button-default-height: 44px;
@@ -183,3 +192,12 @@ $search-left-icon-color: $gray-dark;
 $search-action-padding: 0 $padding-xs;
 $search-action-text-color: $text-color;
 $search-action-font-size: $font-size-md;
+
+// Popup
+$popup-background-color: $white;
+$popup-transition: transform $animation-duration-base ease-out;
+$popup-round-border-radius: 20px;
+$popup-close-icon-size: 18px;
+$popup-close-icon-color: $gray-dark;
+$popup-close-icon-margin: 16px;
+$popup-close-icon-z-index: 1;
