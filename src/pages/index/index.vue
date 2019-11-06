@@ -71,7 +71,7 @@ page {
 .van-demo-header {
   display: flex;
   box-sizing: border-box;
-  padding: 20rpx 0 22rpx 32rpx;
+  padding: 50rpx 0 22rpx 32rpx;
   align-items: center;
   .img {
     width: 72rpx;

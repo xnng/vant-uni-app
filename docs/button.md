@@ -52,16 +52,6 @@ export default {
 <van-button disabled type="info">禁用状态</van-button>
 ```
 
-### 加载状态
-
-通过`loading`属性设置按钮为加载状态，加载状态下默认会隐藏按钮文字，可以通过`loading-text`设置加载状态下的文字
-
-```html 
-<van-button loading type="primary" />
-<van-button loading type="primary" loading-type="spinner" />
-<van-button loading type="info" loading-text="加载中..." />
-```
-
 ### 按钮形状
 
 通过`square`设置方形按钮，通过`round`设置圆形按钮
@@ -69,16 +59,6 @@ export default {
 ```html 
 <van-button square type="primary">方形按钮</van-button>
 <van-button round type="info">圆形按钮</van-button>
-```
-
-### 图标按钮
-
-通过`icon`属性设置按钮图标，支持 Icon 组件里的所有图标，也可以传入图标 URL
-
-```html 
-<van-button icon="star-o" type="primary" />
-<van-button icon="star-o" type="primary">按钮</van-button>
-<van-button icon="https://img.yzcdn.cn/vant/logo.png" type="info">按钮</van-button>
 ```
 
 ### 按钮尺寸
@@ -119,28 +99,17 @@ export default {
 |:------|:------|:------|:------|:------|
 | type | 类型，可选值为 `primary` `info` `warning` `danger` | *string* | `default` | - |
 | size | 尺寸，可选值为 `large` `small` `mini` | *string* | `normal` | - |
-| text | 按钮文字 | *string* | - | - |
 | color | 按钮颜色，支持传入`linear-gradient`渐变色 | *string* | - | - |
-| icon | 左侧图标名称或图片链接，可选值见 [Icon 组件](./icon.md) | *string* | - | - |
-| tag | HTML 标签 | *string* | `button` | - |
-| native-type | 原生 button 标签 type 属性 | *string* | - | - |
-| block | 是否为块级元素 | *boolean* | `false` | - |
 | plain | 是否为朴素按钮 | *boolean* | `false` | - |
 | square | 是否为方形按钮 | *boolean* | `false` | - |
 | round | 是否为圆形按钮 | *boolean* | `false` | - |
 | disabled | 是否禁用按钮 | *boolean* | `false` | - |
 | hairline | 是否使用 0.5px 边框 | *boolean* | `false` | - |
-| loading | 是否显示为加载状态 | *boolean* | `false` | - |
-| loading-text | 加载状态提示文字 | *string* | - | - |
-| loading-type | 加载图标类型，可选值为`spinner` | *string* | `circular` | - |
-| loading-size | 加载图标大小 | *string* | `20px` | - |
-| url | 点击后跳转的链接地址 | *string* | - | - |
-| to | 点击后跳转的目标路由对象，同 vue-router 的 [to 属性](https://router.vuejs.org/zh/api/#to) | *string \| object* | - | - |
-| replace | 是否在跳转时替换当前页面历史 | *boolean* | `false` | - |
+| url | 点击后跳转的链接地址，同 uni.navigateTo | *string* | - | - |
+| to | 点击后跳转的链接地址，同 uni.redirectTo | *string* | - | - |
 
 ### Events
 
 | 事件名 | 说明 | 回调参数 |
 |:------|:------|:------|
-| click | 点击按钮，且按钮状态不为加载或禁用时触发 | event: Event |
-| touchstart | 开始触摸按钮时触发 | event: TouchEvent |
+| click | 点击按钮，且按钮状态不为禁用时触发 | event: Event |

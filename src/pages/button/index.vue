@@ -1,5 +1,5 @@
 <template>
-  <view>
+  <view class="page-container">
     <view class="demo-title">按钮类型</view>
     <view class="demo-row">
       <van-button class="demo-margin-right" type="default">默认按钮</van-button>
@@ -68,10 +68,10 @@ export default {
 .demo-margin-right {
   margin-right: 15px;
 }
-</style>
-
-<style lang="scss">
-page {
+.page-container {
+  width: 100vw;
+  min-height: 100vh;
+  overflow-y: scroll;
   box-sizing: border-box;
   padding: 0 30rpx 30rpx 30rpx;
 }
