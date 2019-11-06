@@ -4,7 +4,9 @@
 
     <section class="van-post-container">
       <Content class="theme-default-content" />
-      <PageVant />
+      <ClientOnly>
+        <PageVant />
+      </ClientOnly>
     </section>
     <PageEdit />
 
