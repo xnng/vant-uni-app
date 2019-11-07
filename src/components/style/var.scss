@@ -208,3 +208,35 @@ $stepper-input-disabled-text-color: $gray;
 $stepper-input-disabled-background-color: $active-color;
 $border-radius-md: 4px;
 $stepper-border-radius: $border-radius-md;
+
+
+// Popup
+$popup-background-color: $white;
+$popup-transition: transform $animation-duration-base ease-out;
+$popup-round-border-radius: 20px;
+$popup-close-icon-size: 18px;
+$popup-close-icon-color: $gray-dark;
+$popup-close-icon-margin: 16px;
+$popup-close-icon-z-index: 1;
+
+// Field
+$field-label-width: 90px;
+$field-input-text-color: $text-color;
+$field-input-error-text-color: $red;
+$field-input-disabled-text-color: $gray-dark;
+$field-placeholder-text-color: $gray-dark;
+$field-icon-size: 16px;
+$field-clear-icon-size: 16px;
+$field-clear-icon-color: $gray;
+$field-right-icon-color: $gray-dark;
+$field-error-message-color: $red;
+$field-error-message-text-color: 12px;
+$field-text-area-min-height: 60px;
+$field-word-limit-color: $gray-darker;
+$field-word-limit-font-size: $font-size-sm;
+$field-word-limit-line-height: 16px;
+
+// Panel
+$panel-background-color: $white;
+$panel-header-value-color: $red;
+$panel-footer-padding: $padding-xs $padding-md; 
