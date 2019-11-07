@@ -3,6 +3,8 @@
 .van-field {
   &__label {
     flex: none !important;
+    display: flex;
+    align-items: center;
     width: $field-label-width;
   }
 }

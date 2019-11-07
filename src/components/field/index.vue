@@ -1,13 +1,26 @@
 <template>
   <view>
-    <van-cell :required="required" value="" titleClass="van-field__label">
+    <van-cell :required="required" value titleClass="van-field__label" :icon="leftIcon && leftIcon">
       <view slot="title" v-if="label">{{label}}</view>
       <view slot="right-icon" v-if="rightIcon" class="van-field__right-icon" @click="clickIcon">
         <van-icon name="question-o"></van-icon>
       </view>
       <view class="van-field__body">
-        <input class="van-field__control" type="text" :placeholder="placeholder" @input="handleInput" :value="currentValue" @focus="handleFocus" @blur="handleBlur">
+        <input
+          class="van-field__control"
+          :disabled="disabled"
+          :class="disabled && 'van-field__control--disabled'"
+          :type="type ? type : 'text'"
+          :placeholder="placeholder"
+          @input="handleInput"
+          :value="currentValue"
+          @focus="handleFocus"
+          @blur="handleBlur"
+        />
         <van-icon v-if="clearable && showClearable" name="clear" class="van-field__clear"></van-icon>
+        <view class="van-field__button">
+          <slot name="button" />
+        </view>
       </view>
     </van-cell>
   </view>
@@ -25,6 +38,18 @@ export default {
     }
   },
   props: {
+    disabled: {
+      type: Boolean,
+      default: false
+    },
+    type: {
+      type: String,
+      default: ''
+    },
+    leftIcon: {
+      type: String,
+      default: ''
+    },
     placeholder: {
       type: String,
       default: ''
