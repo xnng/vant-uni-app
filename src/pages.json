@@ -77,6 +77,12 @@
       "style": {
         "navigationBarTitleText": "Panel 面板"
       }
+    },
+    {
+      "path": "pages/stepper/index",
+      "style": {
+        "navigationBarTitleText": "stepper 步进器"
+      }
     }
   ],
   "globalStyle": {

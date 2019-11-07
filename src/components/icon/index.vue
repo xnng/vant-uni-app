@@ -1,5 +1,8 @@
 <template>
   <i class="van-icon" :class="[imageIcon?'':`van-icon-${name}`]" @click="closeTag">
+    <!--  #ifndef  H5 -->
+ <i class="van-icon van-iconss" :class="[imageIcon?'':`van-icon-${name}`]" @click="closeTag">
+<!--  #endif -->
     <view v-if="this.dot" class="dot">
       <view style="position:relative">
         <text class="text">{{info}}</text>
