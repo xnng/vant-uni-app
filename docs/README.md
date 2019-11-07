@@ -18,6 +18,15 @@ title: 介绍
 
 ## 更新日志
 
+### v0.1.2 <Badge text="2019-11-07" type="tip"/>
+
+- Features
+
+  - 新增 Field 组件，包含基础功能
+  - Cell: 
+    - 新增`title-class`属性，用来设置左侧标题的额外类名，可解决左侧标题样式无法被覆盖的问题，额外样式必须是全局样式
+    - 新增`required`属性，用来显示表单必填项的星号
+
 ### v0.1.1 <Badge text="2019-11-06" type="tip"/>
 
 - Features

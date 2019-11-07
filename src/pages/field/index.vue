@@ -6,13 +6,14 @@
 
     <van-cell-group title="自定义类型" style="margin-top: 20rpx">
       <van-field
+        class="demo-field"
         v-model="username"
         required
         clearable
         label="用户名"
         right-icon="question-o"
         placeholder="请输入用户名"
-        @click-right-icon="$toast('question')"
+        @click-right-icon="handleRightIcon"
       />
     </van-cell-group>
   </view>
@@ -27,6 +28,15 @@ export default {
     return {
       value: '',
       username: ''
+    }
+  },
+  methods: {
+    handleRightIcon () {
+      uni.showToast({
+        title: 'question',
+        duration: 2000,
+        icon: 'none'
+      })
     }
   }
 }

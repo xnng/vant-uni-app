@@ -39,6 +39,18 @@
   }
   // #endif
 
+  &--required {
+    overflow: visible;
+
+    &::before {
+      position: absolute;
+      left: $padding-xs;
+      color: $cell-required-color;
+      font-size: $cell-font-size;
+      content: '*';
+    }
+  }
+
 
   &--alone {
     color: $text-color !important;

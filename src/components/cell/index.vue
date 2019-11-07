@@ -1,5 +1,9 @@
 <template>
-  <view class="van-cell" :class="hasLink &&  'van-cell--clickable'" @click="handleClick">
+  <view
+    class="van-cell"
+    :class="[hasLink &&  'van-cell--clickable',required && 'van-cell--required']"
+    @click="handleClick"
+  >
     <!-- left-icon -->
     <van-icon class="van-cell__left-icon" v-if="icon" :name="icon" />
 
@@ -7,7 +11,7 @@
     <view
       v-if="!isOnlyHasValue()"
       class="van-cell__title"
-      :class="size === 'large' ? 'van-cell--large': ''"
+      :class="[size === 'large' ? 'van-cell--large': '', titleClass && titleClass]"
     >
       <view>
         <slot v-if="$slots.title" name="title" />
@@ -50,6 +54,10 @@ export default {
       type: String,
       default: ''
     },
+    required: {
+      type: Boolean,
+      default: false
+    },
     value: {
       type: String,
       default: ''
@@ -81,6 +89,10 @@ export default {
     isLink: {
       type: Boolean,
       default: false
+    },
+    titleClass: {
+      type: String,
+      default: ''
     }
   },
   computed: {

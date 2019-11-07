@@ -1,7 +1,23 @@
 @import './var.scss';
 
+.van-field {
+  &__label {
+    flex: none !important;
+    width: $field-label-width;
+  }
+}
+
+.demo-field .van-field__right-icon .van-icon {
+  color: #1989fa;
+}
+
 .uni-input {
   height: 100% !important;
+}
+
+.uni-input-form,
+.uni-input-wrapper {
+  font-size: inherit;
 }
 
 .van-collapse-item__title {

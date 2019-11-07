@@ -18,10 +18,11 @@
     display: flex;
     height: 100%;
     align-items: center;
+    height: 24px;
   }
-
+  
   &__control {
-    font-size: inherit;
+    font-size: 14px;
     display: block;
     box-sizing: border-box;
     width: 100%;
