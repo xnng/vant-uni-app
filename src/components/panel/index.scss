@@ -1,0 +1,34 @@
+@import '../style/var.scss';
+
+.van-hairline {
+  &--top {
+    position: relative;
+    &::before {
+      position: absolute;
+      box-sizing: border-box;
+      content: ' ';
+      pointer-events: none;
+      right: 0;
+      top: 0;
+      left: $padding-md;
+      border-top: 1px solid $cell-border-color;
+      transform: scaleY(0.5);
+    }
+  }
+}
+
+.van-panel {
+  background: $panel-background-color;
+
+  &__header-value {
+    color: $panel-header-value-color;
+  }
+
+  &__content {
+    padding: 40rpx;
+  }
+
+  &__footer {
+    padding: $panel-footer-padding;
+  }
+}

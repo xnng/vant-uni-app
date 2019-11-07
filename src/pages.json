@@ -71,6 +71,12 @@
       "style": {
         "navigationBarTitleText": "Field 输入框"
       }
+    },
+    {
+      "path": "pages/panel/index",
+      "style": {
+        "navigationBarTitleText": "Panel 面板"
+      }
     }
   ],
   "globalStyle": {

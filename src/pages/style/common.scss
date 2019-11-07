@@ -17,6 +17,13 @@ page {
   }
 }
 
+.demo-panel__footer {
+  text-align: right;
+  .van-button {
+    margin-left: 10rpx !important;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 5px;
   height: 10px;

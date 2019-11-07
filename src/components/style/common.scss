@@ -9,6 +9,12 @@
   }
 }
 
+.van-panel {
+  &__header-value {
+    color: $panel-header-value-color !important;
+  }
+}
+
 .demo-field .van-field__right-icon .van-icon {
   color: #1989fa;
 }

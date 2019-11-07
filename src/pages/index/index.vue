@@ -53,6 +53,7 @@ export default {
           title: '展示组件',
           children: [
             { title: 'Collapse 折叠面板', url: '/pages/collapse/index' },
+            { title: 'Panel 面板', url: '/pages/panel/index' },
             { title: 'Tag 标记', url: '/pages/tag/index' }
           ]
         },

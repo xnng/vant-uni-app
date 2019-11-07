@@ -30,7 +30,7 @@ module.exports = {
           title: '展示组件',
           collapsable: false,
           sidebarDepth: 2,
-          children: ['collapse', 'tag']
+          children: ['collapse', 'panel', 'tag']
         },
         {
           title: '业务组件',

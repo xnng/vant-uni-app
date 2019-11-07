@@ -21,7 +21,7 @@
       <view
         v-if="label || $slots.label"
         class="van-cell__label"
-        :class="size === 'large' ? 'van-cell--large': ''"
+        :class="[size === 'large' ? 'van-cell--large': '', labelClass]"
       >
         <slot v-if="$slots.label" name="label" />
         <block v-else-if="label">{{label}}</block>
@@ -29,7 +29,10 @@
     </view>
 
     <!-- value -->
-    <view class="van-cell__value" :class="isOnlyHasValue() ? 'van-cell--alone': ''">
+    <view
+      class="van-cell__value"
+      :class="[isOnlyHasValue() ? 'van-cell--alone': '', valueClass]"
+    >
       <slot v-if="$slots.default" name="default" />
       <block v-else-if="value">{{value}}</block>
     </view>
@@ -51,6 +54,14 @@ export default {
   components: { vanIcon },
   props: {
     title: {
+      type: String,
+      default: ''
+    },
+    valueClass: {
+      type: String,
+      default: ''
+    },
+    labelClass: {
       type: String,
       default: ''
     },

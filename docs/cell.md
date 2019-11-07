@@ -119,9 +119,11 @@ export default {
 | size | 单元格大小，可选值为`large` | *string* | - | - |
 | url | 点击后跳转的链接地址，同 uni.navigateTo | *string* | - | - |
 | to | 点击后跳转的链接地址，同 uni.redirectTo | *string* | - | - |
-| is-link | 左侧标题额外类名 | *string* | - | - |
+| is-link | 是否展示右侧箭头并开启点击反馈 | *string* | - | - |
 | required | 是否显示表单必填星号 | *boolean* | false | - |
-| title-class| 是否展示右侧箭头并开启点击反馈 | *string* | - | - |
+| title-class| 左侧标题额外类名 | *string* | - | - |
+| value-class| 右侧内容额外类名 | *string* | - | - |
+| label-class| 	描述信息额外类名 | *string* | - | - |
 
 ### Cell Events
 
