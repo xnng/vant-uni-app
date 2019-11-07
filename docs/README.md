@@ -27,6 +27,9 @@ title: 介绍
     - 新增`title-class`属性，用来设置左侧标题的额外类名，可解决左侧标题样式无法被覆盖的问题，额外样式必须是全局样式
     - 新增`required`属性，用来显示表单必填项的星号
 
+- Bug Fixes
+  - 修复 Icon 组件 click 事件名绑定错误的问题
+
 ### v0.1.1 <Badge text="2019-11-06" type="tip"/>
 
 - Features

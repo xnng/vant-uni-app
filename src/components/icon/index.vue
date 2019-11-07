@@ -31,7 +31,7 @@ export default {
       return name ? name.indexOf('/') !== -1 : false
     },
     closeTag () {
-      this.$emit('closeTag', this.name)
+      this.$emit('click')
     }
 
   }

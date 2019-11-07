@@ -17,7 +17,7 @@
           @focus="handleFocus"
           @blur="handleBlur"
         />
-        <van-icon v-if="clearable && showClearable" name="clear" class="van-field__clear"></van-icon>
+        <van-icon v-if="clearable && showClearable" name="clear" class="van-field__clear" @click="clickClearIcon"></van-icon>
         <view class="van-field__button">
           <slot name="button" />
         </view>
@@ -92,9 +92,17 @@ export default {
       this.$emit('click-right-icon')
     },
     handleBlur () {
-      this.showClearable = false
+      setTimeout(() => {
+        this.showClearable = false
+      }, 500)
+      this.$emit('blur')
+    },
+    clickClearIcon () {
+      this.currentValue = ''
+      this.$emit('input', '')
     },
     handleFocus () {
+      this.$emit('focus')
       if (this.currentValue) {
         this.showClearable = true
       }

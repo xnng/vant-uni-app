@@ -64,27 +64,6 @@ export default {
 </van-cell-group>
 ```
 
-### 错误提示
-
-通过`error`或者`error-message`属性增加对应的错误提示
-
-```html
-<van-cell-group>
-  <van-field
-    v-model="username"
-    label="用户名"
-    placeholder="请输入用户名"
-    error
-  />
-  <van-field
-    v-model="phone"
-    label="手机号"
-    placeholder="请输入手机号"
-    error-message="手机号格式错误"
-  />
-</van-cell-group>
-```
-
 ### 插入按钮
 
 通过 button 插槽可以在输入框尾部插入按钮
@@ -103,42 +82,6 @@ export default {
 </van-cell-group>
 ```
 
-### 高度自适应
-
-对于 textarea，可以通过`autosize`属性设置高度自适应
-
-```html
-<van-cell-group>
-  <van-field
-    v-model="message"
-    rows="1"
-    autosize
-    label="留言"
-    type="textarea"
-    placeholder="请输入留言"
-  />
-</van-cell-group>
-```
-
-### 显示字数统计
-
-设置`maxlength`和`show-word-limit`属性后会在底部显示字数统计
-
-```html
-<van-cell-group>
-  <van-field
-    v-model="message"
-    rows="2"
-    autosize
-    label="留言"
-    type="textarea"
-    maxlength="50"
-    placeholder="请输入留言"
-    show-word-limit
-  />
-</van-cell-group>
-```
-
 ## API
 
 ### Props
@@ -148,28 +91,12 @@ export default {
 | label | 输入框左侧文本 | *string* | - | - |
 | value | 当前输入的值 | *string \| number* | - | - |
 | type | 输入框类型, 可选值为 `tel` `number`<br>`textarea` `password` 等 | *string* | `text` | - |
-| size | 大小，可选值为 `large` | *string* | - | - |
-| maxlength | 输入的最大字符数 | *string \| number* | - | - |
 | placeholder | 占位提示文字 | *string* | - | - |
-| border | 是否显示内边框 | *boolean* | `true` | - |
 | disabled | 是否禁用输入框 | *boolean* | `false` | - |
-| readonly | 是否只读 | *boolean* | `false` | - |
 | required | 是否显示表单必填星号 | *boolean* | `false` | - |
 | clearable | 是否启用清除控件 | *boolean* | `false` | - |
-| clickable | 是否开启点击反馈 | *boolean* | `false` | - |
-| is-link | 是否展示右侧箭头并开启点击反馈 | *boolean* | `false` | - |
-| show-word-limit | 是否显示字数统计，需要设置`maxlength`属性 | *boolean* | `false` | 2.2.8 |
-| error | 是否将输入内容标红 | *boolean* | `false` | - |
-| arrow-direction | 箭头方向，可选值为 `left` `up` `down` | *string* | - | 2.0.4 |
-| error-message | 底部错误提示文案，为空时不展示 | *string* | `''` | - 
-| label-class | 左侧文本额外类名 | *any* | - | - |
-| label-width | 左侧文本宽度，默认单位为`px` | *string \| number* | `90px` | - |
-| label-align | 左侧文本对齐方式，可选值为 `center` `right` | *string* | `left` | - |
-| input-align | 输入框内容对齐方式，可选值为 `center` `right` | *string* | `left` | - |
-| error-message-align | 错误提示文案对齐方式，可选值为 `center` `right` | *string* | `left` | - |
-| autosize | 自适应内容高度，只对 textarea 有效，可传入对象,<br>如 { maxHeight: 100, minHeight: 50 }，单位为`px` | *boolean \| object* | `false` | - |
-| left-icon | 左侧图标名称或图片链接，可选值见 [Icon 组件](#/zh-CN/icon) | *string* | - | - |
-| right-icon | 右侧图标名称或图片链接，可选值见 [Icon 组件](#/zh-CN/icon) | *string* | - | - |
+| left-icon | 左侧图标名称或图片链接，可选值见 Icon 组件 | *string* | - | - |
+| right-icon | 右侧图标名称或图片链接，可选值见 Icon 组件 | *string* | - | - |
 
 ### Events
 
@@ -181,8 +108,6 @@ export default {
 | focus | 输入框获得焦点时触发 | event: Event |
 | blur | 输入框失去焦点时触发 | event: Event |
 | clear | 点击清除按钮时触发 | event: Event |
-| click | 点击时触发 | event: Event |
-| click-left-icon | 点击左侧图标时触发 | event: Event |
 | click-right-icon | 点击右侧图标时触发 | event: Event |
 
 ### 方法
