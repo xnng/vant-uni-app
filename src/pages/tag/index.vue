@@ -1,5 +1,5 @@
 <template>
-  <view>
+  <view class="contain">
          <view class="demo-title">基础用法</view>
     <view  class="demo-tag">
       <van-tag>{{tag}}</van-tag>
@@ -51,14 +51,14 @@
     <view class="demo-tag">
       <van-tag
         v-if="show.primary"
-        size="medium"
+
         closeable
         type="primary"
         @close="close('primary')"
       >{{tag}}</van-tag>
       <van-tag
         v-if="show.success"
-        size="medium"
+
         closeable
         type="success"
         @close="close('success')"
@@ -103,16 +103,22 @@ export default {
 @import '../../components/style/var';
 .demo-title {
   font-size: 14px;
-padding: 35px 15px 15px;
-  margin-bottom: 10px;
+padding: 35px 15px 0;
   background-color: #fff;
   color: rgba(69, 90, 100, 0.6);
 }
 .demo-tag {
   display: flex;
+  margin-bottom: 22px;
    div{
-       margin-left: 10px;
+     line-height: 35px;
+    margin-left: 10px;
+    height: 7px;
 
    }
+}
+.contain{
+  background-color: #fff;
+  padding-bottom: 30px;
 }
 </style>

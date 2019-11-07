@@ -4,7 +4,9 @@
     align-items: center;
     overflow: hidden;
     user-select: none;
-
+    .van-checkbox__icon--disabled.van-checkbox__icon--checked .van-icon {
+      color: #c8c9cc;
+  }
     &--icon {
 
     }

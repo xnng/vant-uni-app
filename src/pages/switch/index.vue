@@ -1,5 +1,5 @@
 <template>
-  <view>
+  <view class="root">
         <view class="demo-title">基础用法</view>
     <view class="cell">
       <van-cell-group>
@@ -59,6 +59,7 @@ export default {
 }
 </script>
 <style lang="scss">
+
   .cell{
     margin: 20px 0;
     background: #fff;
@@ -66,11 +67,15 @@ export default {
   .demo-title {
   font-size: 14px;
   padding-top: 15px;
+   padding-left:15px;
   margin-bottom: 10px;
   color: rgba(69, 90, 100, 0.6);
 }
 .cell-only{
   display: flex;
   justify-content: space-between;
+  padding:10px;
+      height: 30px;
+    line-height: 30px;
 }
 </style>

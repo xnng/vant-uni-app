@@ -9,7 +9,7 @@
       >
         <van-icon
           class="van-checkbox--icon"
-          :style="{backgroundColor:checkedColor?checkedColor:''}"
+          :style="{backgroundColor:status?checkedColor:''}"
           name="success"
         >
           <!---->

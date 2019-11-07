@@ -27,12 +27,25 @@
       <van-checkbox name="bb">复选框 bb</van-checkbox>
       <van-checkbox name="cc">复选框 cc</van-checkbox>
     </van-checkbox-group>
+   <!-- <van-checkbox-group v-model="result3">
+        <van-cell-group>
+          <van-cell
+            v-for="(item, index) in list"
+            clickable
+            :key="index"
+            :title="item"
+          >
+            <template #right-icon>
+              <van-checkbox ref="checkboxes" :name="item" v-model="checked1" />
+            </template>
+          </van-cell>
+        </van-cell-group>
+      </van-checkbox-group> -->
   </view>
 </template>
 <script>
 import vanCheckbox from '@/components/checkBox'
 import vanCheckboxGroup from '@/components/checkBoxGroup'
-
 export default {
   components: {
     vanCheckbox,
@@ -40,9 +53,14 @@ export default {
   },
   data () {
     return {
+      list: [
+        '复选框a',
+        '复选框b',
+        '复选框c'
+      ],
       checked: false,
       checked1: true,
-      // checked2: true,
+      checked2: false,
       checked3: true,
       checked4: true,
       checked5: true,
@@ -50,17 +68,18 @@ export default {
       activeIcon: 'https://img.yzcdn.cn/vant/user-active.png',
       inactiveIcon: 'https://img.yzcdn.cn/vant/user-inactive.png',
       result: [],
-      result1: []
+      result1: [],
+      result3: []
     }
   },
   methods: {
     change (e, name) {
       console.log(e)
       // console.log(name, i)
-      console.log(name)
 
       // if (name) this.checked2 = e
     }
+
   }
 }
 </script>
@@ -85,5 +104,6 @@ van-checkbox{
 }
 .van-checkbox{
   font-size: 14px;
+  margin: 5px;
 }
 </style>
