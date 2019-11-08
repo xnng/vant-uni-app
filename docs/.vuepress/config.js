@@ -36,7 +36,7 @@ module.exports = {
           title: '业务组件',
           collapsable: false,
           sidebarDepth: 2,
-          children: ['card']
+          children: ['card','addressEdit']
         }
       ]
     }

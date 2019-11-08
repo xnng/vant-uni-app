@@ -83,6 +83,12 @@
       "style": {
         "navigationBarTitleText": "stepper 步进器"
       }
+    },
+    {
+      "path": "pages/addressEdit/index",
+      "style": {
+        "navigationBarTitleText": "AddressEdit 地址编辑"
+      }
     }
   ],
   "globalStyle": {
