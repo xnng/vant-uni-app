@@ -75,15 +75,12 @@
     "Android >= 4",
     "ios >= 8"
   ],
-  "gitHooks": {
-    "pre-commit": "lint-staged"
+  "lint-staged": {
+    "*.{js,vue}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
   },
-  // "lint-staged": {
-  //   "*.{js,vue}": [
-  //     "vue-cli-service lint",
-  //     "git add"
-  //   ]
-  // },
   "uni-app": {
     "scripts": {}
   }
