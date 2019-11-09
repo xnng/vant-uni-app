@@ -8,16 +8,22 @@
       <view class="van-field__body">
         <input
           class="van-field__control"
-          :disabled="disabled"
-          :class="disabled && 'van-field__control--disabled'"
+          :disabled="disabled || readonly"
+          :class="[disabled && 'van-field__control--disabled']"
           :type="type ? type : 'text'"
           :placeholder="placeholder"
           @input="handleInput"
           :value="currentValue"
           @focus="handleFocus"
           @blur="handleBlur"
+          @click="handleClickInput"
         />
-        <van-icon v-if="clearable && showClearable" name="clear" class="van-field__clear" @click="clickClearIcon"></van-icon>
+        <van-icon
+          v-if="clearable && showClearable"
+          name="clear"
+          class="van-field__clear"
+          @click="clickClearIcon"
+        ></van-icon>
         <view class="van-field__button">
           <slot name="button" />
         </view>
@@ -31,7 +37,7 @@ import vanCell from '../cell'
 import vanIcon from '../icon'
 export default {
   components: { vanCell, vanIcon },
-  data () {
+  data() {
     return {
       showClearable: false,
       currentValue: ''
@@ -45,6 +51,10 @@ export default {
     type: {
       type: String,
       default: ''
+    },
+    readonly: {
+      type: Boolean,
+      default: false
     },
     leftIcon: {
       type: String,
@@ -75,11 +85,16 @@ export default {
       default: false
     }
   },
-  mounted () {
+  watch: {
+    value() {
+      this.currentValue = this.value
+    }
+  },
+  mounted() {
     this.currentValue = this.value
   },
   methods: {
-    handleInput (e) {
+    handleInput(e) {
       this.currentValue = e.target.value
       this.$emit('input', e.target.value)
       if (this.currentValue) {
@@ -88,20 +103,24 @@ export default {
         this.showClearable = false
       }
     },
-    clickIcon () {
+    clickIcon() {
       this.$emit('click-right-icon')
     },
-    handleBlur () {
+    handleClickInput(e) {
+      e.preventDefault()
+      this.$emit('click')
+    },
+    handleBlur() {
       setTimeout(() => {
         this.showClearable = false
       }, 500)
       this.$emit('blur')
     },
-    clickClearIcon () {
+    clickClearIcon() {
       this.currentValue = ''
       this.$emit('input', '')
     },
-    handleFocus () {
+    handleFocus() {
       this.$emit('focus')
       if (this.currentValue) {
         this.showClearable = true

@@ -14,7 +14,8 @@
     :style="{
       background: currentBackground,
       color: currentColor,
-      borderColor: currentBorderColor
+      borderColor: currentBorderColor,
+      width: block && '100%'
     }"
   >
     <slot />
@@ -24,6 +25,10 @@
 <script>
 export default {
   props: {
+    block: {
+      type: Boolean,
+      default: false
+    },
     type: {
       type: String,
       default: 'default'

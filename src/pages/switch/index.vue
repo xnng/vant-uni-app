@@ -34,7 +34,7 @@
         <van-switch v-model="checked3" @change="change"   active-color="#07c160"/>
     </view>
   </view>
-</template>
+</template>z
 <script>
 import vanCellGroup from '../../components/cellGroup'
 import vanSwitch from '../../components/switch'
