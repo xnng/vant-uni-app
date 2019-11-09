@@ -36,22 +36,20 @@
 </template>
 
 <script>
-import vanCellGroup from '@/components/cellGroup'
 import vanField from '@/components/field'
 import vanCell from '@/components/cell'
 import vanSwitch from '@/components/switch'
 import vanButton from '@/components/button'
 import vanPicker from '@/components/picker/w-picker.vue'
 export default {
-  components: { vanCellGroup, vanField, vanCell, vanSwitch, vanButton, vanPicker },
+  components: { vanField, vanCell, vanSwitch, vanButton, vanPicker },
   data () {
     return {
       name: '',
       phone: '',
       location: '',
       address: '',
-      isDefaultAddress: false,
-      range: ['sss', '222', 'ppp']
+      isDefaultAddress: false
     }
   },
   methods: {

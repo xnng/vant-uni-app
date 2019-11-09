@@ -1,53 +1,54 @@
----
-title: 介绍
----
+# 快速上手
 
-<p align="center">
-    <img alt="logo" src="https://img.yzcdn.cn/vant/logo.png" width="120" height="120">
-    <p style="text-align: center; font-size: 36px; margin: 0">Vant uni-app</p>
-    <p style="text-align: center; margin: 0">轻量、可靠的移动端 Vue 组件库</p>
-</p>
+## 脚手架
 
-## 项目介绍
+推荐使用 Vue 官方提供的脚手架 [Vue Cli 3](https://cli.vuejs.org/zh/) 创建 uni-app 项目
 
-本项目为 [Vant](https://youzan.github.io/vant/#/zh-CN/intro) 的 uni-app 移植版。目标是实现与 Vant 完全一致的 API，支持通过 uni-app 一次编译到多平台，目前主要支持 H5 和小程序端。
+### 安装 Vue Cli
 
-## 扫码预览
+```bash
+npm install -g @vue/cli
+```
 
-<img style="height: 200px; display: block; margin: 20px auto 0 auto" src="https://cdn.xnngs.cn/img/20191104142053.png" />
+### 创建一个 uni-app 项目
 
-## 更新日志
+```bash
+vue create -p dcloudio/uni-preset-vue my-project
+```
 
-### v0.1.3 <Badge text="2019-11-07" type="tip"/>
+## 安装
 
-- Features
+### 通过 npm 安装
 
-  - 新增 Panel 面板组件，包含基础功能
-  - Cell: 
-    - 新增`value-class`和`label-class`属性，为右侧内容和描述信息提供额外类名，额外样式必须是全局样式，且同名样式必须有`!important`
+```bash
+npm i vant-uni-app
+```
 
-### v0.1.2 <Badge text="2019-11-07" type="tip"/>
+### 通过 yarn 安装
 
-- Features
+```bash
+yarn add vant-uni-app
+```
 
-  - 新增 Field 组件，包含基础功能
-  - Cell: 
-    - 新增`title-class`属性，用来设置左侧标题的额外类名，可解决左侧标题样式无法被覆盖的问题，额外样式必须是全局样式，且同名样式必须有`!important`
-    - 新增`required`属性，用来显示表单必填项的星号
+## 引入组件
 
-- Bug Fixes
-  - 修复 Icon 组件 click 事件名绑定错误的问题
+uni-app 目前还不支持全局注册组件，仅支持局部注册，使用 `button` 组示例：
 
-### v0.1.1 <Badge text="2019-11-06" type="tip"/>
+- 引入
 
-- Features
+```js
+<script>
+import vanButton from 'vant-uni-app/lib/button'
+export default {
+  components: { vanButton }
+}
+</script>
+```
 
-  - 完成弹出层组件基本功能
+- 使用
 
-### v0.1.0 <Badge text="2019-11-06" type="tip"/>
-
-- Features
-
-  - 完成 `Button`、`Cell`、`Icon`、`Checkbox`、`Search`、`Switch`、`Collapse`、`Tag`、`Card` 这 9 个组件的基础功能
-  - doc: 完成 9 个上面 9 个组件对应的文档，实现 h5 预览窗口和文档的路由同步
-
+```js
+<template>
+  <van-button>按钮</van-button>
+</template>
+```

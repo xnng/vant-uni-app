@@ -46,7 +46,8 @@ export default {
             { title: 'Checkbox 复选框', url: '/pages/checkBox/index' },
             { title: 'Search 搜索', url: '/pages/search/index' },
             { title: 'Switch 开关', url: '/pages/switch/index' },
-            { title: 'Field 输入框', url: '/pages/field/index' }
+            { title: 'Field 输入框', url: '/pages/field/index' },
+            { title: 'Radio 单选框', url: '/pages/radio/index' }
           ]
         },
         {
@@ -59,7 +60,11 @@ export default {
         },
         {
           title: '业务组件',
-          children: [{ title: 'Card 商品卡片', url: '/pages/card/index' }]
+          children: [
+            { title: 'Card 商品卡片', url: '/pages/card/index' },
+            { title: 'AddressEdit 地址编辑', url: '/pages/addressEdit/index' },
+            { title: 'AddressList 地址列表', url: '/pages/addressList/index' }
+            ]
         }
       ]
     }

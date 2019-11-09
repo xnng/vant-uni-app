@@ -94,7 +94,6 @@ export default {
 
 <style lang="stylus" scoped>
 .van-container {
-  z-index: 20;
   box-sizing: border-box;
   padding-top: 89px;
   margin: 0 auto;

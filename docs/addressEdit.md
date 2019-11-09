@@ -69,8 +69,7 @@ export default {
       phone: '',
       location: '',
       address: '',
-      isDefaultAddress: false,
-      range: ['sss', '222', 'ppp']
+      isDefaultAddress: false
     }
   },
   methods: {
@@ -78,7 +77,6 @@ export default {
       this.location = e.result
     },
     handleClickAddress () {
-      console.log('click')
       this.$refs.region.show()
     }
   }

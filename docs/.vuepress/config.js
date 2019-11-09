@@ -1,5 +1,6 @@
 module.exports = {
   title: 'Vant uni-app',
+  port: 8091,
   themeConfig: {
     nav: [
       { text: 'NPM', link: 'https://www.npmjs.com/package/vant-uni-app', target: '_blank' },
@@ -12,7 +13,7 @@ module.exports = {
           title: '开发指南',
           collapsable: false,
           sidebarDepth: 2,
-          children: ['', 'quickstart']
+          children: ['']
         },
         {
           title: '基础组件',
@@ -24,7 +25,7 @@ module.exports = {
           title: '表单组件',
           collapsable: false,
           sidebarDepth: 2,
-          children: ['checkbox', 'search','switch', 'field']
+          children: ['checkbox', 'search', 'switch', 'field']
         },
         {
           title: '展示组件',
@@ -36,7 +37,7 @@ module.exports = {
           title: '业务组件',
           collapsable: false,
           sidebarDepth: 2,
-          children: ['card','addressEdit']
+          children: ['card', 'addressEdit']
         }
       ]
     }
